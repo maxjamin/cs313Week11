@@ -12,5 +12,6 @@ function getUser() {
 
 		})
 
-		document.getElementById("loginForm").style.display = "block";
+		/*If user is their, log in and hide log in form*/
+		document.getElementById("loginForm").style.display = "none";
 }
