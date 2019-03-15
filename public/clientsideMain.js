@@ -12,7 +12,7 @@ function getUser() {
 			var x = data[0];
 			console.log("Test01: " + x);
 			
-			document.getElementById("demo").innerHTML = data.username;
+			document.getElementById("userLoginBar").innerHTML = data.username + " logged in";
 
 		})
 
