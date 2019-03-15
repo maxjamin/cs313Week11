@@ -8,7 +8,7 @@ function getUser() {
 		console.log("The user" +  username + password);
 
 		$.get("/logInUser", {userName:username, password:password}, function(data) {
-			console.log("DATA RETURNED: " + data);
+			console.log("DATA RETURNED: " + JSON.stringify(data));
 			var x = data[0];
 			console.log("Test01: " + x);
 			
