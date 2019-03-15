@@ -21,7 +21,7 @@ function getPersonFromDb(id, password, callback) {
 		}
 
 		console.log("Found result: " + JSON.stringify(result.rows));
-		callback(null, result/*.rows*/);
+		callback(null, result.rows);
 		
 	});
 
