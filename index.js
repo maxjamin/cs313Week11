@@ -42,6 +42,7 @@ function getPerson(request, response) {
 	});
 	console.log("Test03");
 }
+
 function getPersonFromDb(id, password, callback) {
 	console.log("Getting person from DB with : " + id);
 
