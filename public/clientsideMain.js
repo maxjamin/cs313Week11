@@ -9,10 +9,10 @@ function getUser() {
 
 		$.get("/logInUser", {userName:username, password:password}, function(data) {
 			console.log("DATA RETURNED: " + data);
+			document.getElementById("demo").innerHTML = data.username;
 
 		})
 
 		/*If user is their, log in and hide log in form*/
 		document.getElementById("loginForm").style.display = "none";
-		document.getElementById("demo").innerHTML = data.username;
 }
