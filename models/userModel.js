@@ -29,4 +29,4 @@ function getPersonFromDb(id, password, callback) {
 
 module.exports = {
 	getPersonFromDb: getPersonFromDb
-}
+};
