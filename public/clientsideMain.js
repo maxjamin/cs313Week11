@@ -17,5 +17,5 @@ function getUser() {
 		})
 
 		/*If user is their, log in and hide log in form*/
-		$("#loginForm").style.display = "none";
+		document.getElementById("loginForm").style.display = "none";
 }
