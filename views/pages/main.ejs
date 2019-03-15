@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="jquery-3.3.1.min.js"></script>
 	<script type="text/javascript">
 		
 	function getUser() {
 		console.log("getUser called");
-		var username = document.getElementById("userName").value;
-		var password = document.getElementById("password").value;
+		//var username = document.getElementById("userName").value;
+		//var password = document.getElementById("password").value;
 		var inputValue = "/logInUser?userName=" + username + "&password=" + password;
-		console.log("The input value: " + inputValue);
+
+
+		var user = $("#userName").val();
+		var pass = $("#password").val();
+		console.log("The user": user + pass);
+
+		/*console.log("The input value: " + inputValue);
 		var xhttp;
  		xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
@@ -17,7 +24,7 @@
   		}
 			};
 		xhttp.open("GET", inputValue, true);
-		xhttp.send(); 
+		xhttp.send(); */
 	}
 	</script>
 </head>
