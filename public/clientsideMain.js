@@ -1,4 +1,6 @@
-	function getUser() {
+
+
+function getUser() {
 		console.log("getUser called");
 
 		var username = $("#userName").val();
@@ -9,4 +11,6 @@
 			console.log("DATA RETURNED: " + data);
 
 		})
-	}
+
+		document.getElementById("loginForm").style.display = "block";
+}
