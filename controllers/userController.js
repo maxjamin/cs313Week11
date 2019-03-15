@@ -1,4 +1,4 @@
-const userController = require("../models/userModel.js");
+const userModel = require("../models/userModel.js");
 
 function getPerson(request, response) {
 	// First get the person's id
@@ -6,7 +6,7 @@ function getPerson(request, response) {
 	var pssword = request.query.password;
 	var answer = 68;
 
-	getPersonFromDb(id, pssword, function(error, result) {
+	userModel.getPersonFromDb(id, pssword, function(error, result) {
 		//callback function
 		console.log("Test01" + answer);
 		if (error || result == null || result.length != 1) {
