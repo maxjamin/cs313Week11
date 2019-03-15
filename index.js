@@ -21,7 +21,6 @@ express()
 	console.log("Test04")		
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
-
 function getPerson(request, response) {
 	// First get the person's id
 	var id = request.query.userName;
