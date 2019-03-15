@@ -11,9 +11,14 @@
 		var inputValue = "/logInUser?userName=" + username + "&password=" + password;*/
 
 
-		var user = $("#userName").val();
-		var pass = $("#password").val();
+		var username = $("#userName").val();
+		var password = $("#password").val();
 		console.log("The user" +  user + pass);
+
+		$.get("/logInUser", {userName:username, password:password}, function(data) {
+			console.log("DATA RETURNED: " + data);
+
+		})
 
 		/*console.log("The input value: " + inputValue);
 		var xhttp;
