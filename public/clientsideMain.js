@@ -12,10 +12,10 @@ function getUser() {
 			var x = data[0];
 			console.log("Test01: " + x);
 			
-			document.getElementById("userLoginBar").innerHTML = data.username + " logged in";
+			$("#userLoginBar").append(data.username + " logged in";
 
 		})
 
 		/*If user is their, log in and hide log in form*/
-		document.getElementById("loginForm").style.display = "none";
+		$("#loginForm").style.display = "none";
 }
