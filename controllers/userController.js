@@ -1,4 +1,4 @@
-const userController = require(".../module/userModel.js")
+const userController = require(".../modules/userModel.js")
 
 function getPerson(request, response) {
 	// First get the person's id
