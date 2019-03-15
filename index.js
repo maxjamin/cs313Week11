@@ -1,7 +1,8 @@
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
-const controller = require("./repos/controller.js")
+
+const userController = require("./controllers/userController.js")
 
 const { Pool } = require('pg');
 
@@ -18,7 +19,7 @@ express()
   .get('/main', (req, res) => res.render('pages/main'))
   .get('/logInUser', (req, res) => {
 
-	controller.getPerson(req, res);
+	userController.getPerson(req, res);
 	console.log("Test04")		
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
