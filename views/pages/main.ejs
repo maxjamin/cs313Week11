@@ -2,49 +2,24 @@
 <html>
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript">
-		
-	function getUser() {
-		console.log("getUser called");
-		/*var username = document.getElementById("userName").value;
-		var password = document.getElementById("password").value;
-		var inputValue = "/logInUser?userName=" + username + "&password=" + password;*/
-
-
-		var username = $("#userName").val();
-		var password = $("#password").val();
-		console.log("The user" +  username + password);
-
-		$.get("/logInUser", {userName:username, password:password}, function(data) {
-			console.log("DATA RETURNED: " + data);
-
-		})
-
-		/*console.log("The input value: " + inputValue);
-		var xhttp;
- 		xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function() {
-  		if (this.readyState == 4 && this.status == 200) {
-    		document.getElementById("demo").innerHTML = this.responseText;
-  		}
-			};
-		xhttp.open("GET", inputValue, true);
-		xhttp.send(); */
-	}
-	</script>
+	<script src="clientsideMain.js"></script>
 </head>
 <body>
-	<h2>Week 10 Test</h2>
-	<p>Username: billmaxer Password: "Norway40065"</p>
-	<p>Username: powerFull Password: "Markets6732"</p>
-	<br>
-	<form action="javascript:getUser();">
-		Username: <br>
-		<input type="text" id='userName' name='userName'><br>
-		Password: <br>
-		<input type="password" id='password' name='password'><br>
-		<input type="submit" value="Submit">
-	</form>
+	<h2>Week 11 </h2>
+
+	<div id='loginForm'>
+		<p>Username: billmaxer Password: "Norway40065"</p>
+		<p>Username: powerFull Password: "Markets6732"</p>
+		<br>
+		<form action="javascript:getUser();">
+			Username: <br>
+			<input type="text" id='userName' name='userName'><br>
+			Password: <br>
+			<input type="password" id='password' name='password'><br>
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+
 	<div id="demo"></div>
 
 
