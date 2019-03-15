@@ -12,7 +12,7 @@ function getUser() {
 			var x = data[0];
 			console.log("Test01: " + x);
 			
-			$("#userLoginBar").append(data.username + " logged in";
+			$("#userLoginBar").append(data.username + " logged in");
 
 		})
 
