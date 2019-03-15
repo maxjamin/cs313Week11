@@ -45,6 +45,6 @@ function getPersonFromDb(id, password, callback) {
 
 
 module.exports = {
-	getPerson: getPerson
+	getPerson: getPerson,
 	getPersonFromDb: getPersonFromDb
 }
