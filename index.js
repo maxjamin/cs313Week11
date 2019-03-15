@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
-const controller = require("/repos/controller.js")
+const controller = require("repos/controller.js")
 
 const { Pool } = require('pg');
 
