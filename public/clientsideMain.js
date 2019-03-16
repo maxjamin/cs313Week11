@@ -51,6 +51,7 @@ function loadProductTable(results) {
 	for(var i=0; i<results.length; i++) {
 		var linktoart = "/artWorkImages/" + results[i].linktoart;
 		var name = results[i].name;
+		console.log("Name is: " + name);
 
 		var product = [results[i].name, results[i].description, 
 		"<img src='" + linktoart + "' width='250' height='250'>",
