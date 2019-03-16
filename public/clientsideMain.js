@@ -11,6 +11,10 @@ function checkIfLoggedIn() {
 	}
 }
 
+function removeSessionVar() {
+	localStorage.removeItem("userLogin");
+}
+
 
 function getUser() {
 		console.log("getUser called");
