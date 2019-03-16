@@ -39,9 +39,11 @@ function getUser() {
 function loadProductTable(results) {
 	console.log("loadProductTable");
 
+	for(var i=0; i<results.length; i++) {
+		document.getElementById("productTable").deleteRow(i);
+	}
+
 	var table = document.getElementById("productTable");
-
-
 	for(var i=0; i<results.length; i++) {
 		var row = table.insertRow(0);
 		var cell0 = row.insertCell(0);
