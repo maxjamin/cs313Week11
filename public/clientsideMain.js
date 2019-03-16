@@ -44,15 +44,14 @@ function loadProductTable(results) {
 
 	for(var i=0; i<results.length; i++) {
 
-		console.log("TEST01" + results.length);
 		var linktoart = "/artWorkImages/" + results[i].linktoart;
+
 		var product = [results[i].name, results[i].description, 
 		"<img src='" + linktoart + "' width='250' height='250'>",
 		results[i].price, results[i].quantity, "<button onclick='addToCart(results[i].name)'>+</button>"]
-		var row = table.insertRow(0);
-
+		var prod = table.insertRow(0);
 		for(var i=0; i<6; i++) {
-			var one = row.insertCell(i)
+			var one = prod.insertCell(i)
 			one.innerHTML = product[i]
 
 		}
