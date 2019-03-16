@@ -5,7 +5,7 @@
 }
 
 /* Style the links inside the navigation bar */
-.topButton {
+.topBar button {
   float: left;
   color: #f2f2f2;
   text-align: center;
@@ -14,12 +14,14 @@
   font-size: 17px;
 }
 
-.topButton:hover {
+/* Change the color of links on hover */
+.topBar button:hover {
   background-color: #ddd;
   color: black;
 }
 
-.topButton.active {
+/* Add a color to the active/current link */
+.topBar button.active {
   background-color: #4CAF50;
   color: white;
 }
