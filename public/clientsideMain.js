@@ -61,7 +61,7 @@ function loadProductTable(results) {
 		cell5.innerHTML = "<button onclick='addToCart(results[i].name)'>+</button>"; 
 	}
 
-	var title = ["Name", "Description", "Image", "Amount", "Qt:" "Add to Cart"]; 
+	var title = ["Name", "Description", "Image", "Amount", "Qt:", "Add to Cart"]; 
 	var row = table.insertRow(0);
 	for(var i=0; i<6; i++) {
 		var one = row.insertCell(i)
