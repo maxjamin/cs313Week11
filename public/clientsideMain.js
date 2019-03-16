@@ -36,6 +36,11 @@ function getUser() {
 
 }
 
+function addToCart(item){
+	console.log("Add to cart called");
+}
+
+
 function loadProductTable(results) {
 	console.log("loadProductTable");
 	$("#productTable tr").remove();
@@ -49,6 +54,7 @@ function loadProductTable(results) {
 		results[i].price, results[i].quantity, "<button onclick='addToCart(results[i].name)'>+</button>"];
 		var prod = table.insertRow(i);
 
+		//Add items to the row.
 		for(var k=0; k<6; k++) {
 			var one = prod.insertCell(k);
 			one.innerHTML = product[k];
@@ -66,9 +72,6 @@ function loadProductTable(results) {
 
 }
 
-function addToCart(item){
-	console.log("Add to cart called");
-}
 
 function getProducts() {
 
