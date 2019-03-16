@@ -4,7 +4,7 @@ function getProducts(request, response) {
 
 	productModel.getAllProducts(function(error, result) {
 		//callback function
-		console.log("Test01" + answer);
+		//console.log("Test01" + answer);
 		if (error || result == null || result.length != 1) {
 			response.status(500).json({success: false, data: error});
 		} else {
