@@ -36,11 +36,23 @@ function getUser() {
 
 }
 
+function getProducts() {
+
+	$.get("/getProducts", function(data) {
+
+		console.log("Back from sever: ");
+		console.log(data);
+	})
+}
+
+
 function loadProducts() {
 
 	document.getElementById("products").style.display = "block";
 	document.getElementById("userCart").style.display = "none";
 	document.getElementById("checkout").style.display = "none";
+
+	getProducts();
 }
 
 function loadCart() {

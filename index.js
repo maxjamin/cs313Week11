@@ -3,6 +3,7 @@ const path = require('path')
 const PORT = process.env.PORT || 5000
 
 const userController = require("./controllers/userController.js");
+const productController = require("./controllers/productController.js");
 
 const { Pool } = require('pg');
 
@@ -22,5 +23,11 @@ express()
 	userController.getPerson(req, res);
 	console.log("Test04")		
   })
+  .get('/getProducts', (req, res) => {
+
+  	//productController.getProducts(req, res);
+  	console.log("Test05")
+  })
+
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
