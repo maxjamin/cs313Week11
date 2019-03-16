@@ -7,7 +7,7 @@ function checkIfLoggedIn() {
 		console.log("User exists" + username);
 
 		document.getElementById("userLoginBar").innerHTML = username + " logged in";
-		//document.getElementById("loginForm").style.display = "none";
+		document.getElementById("loginForm").style.display = "none";
 	}
 }
 
