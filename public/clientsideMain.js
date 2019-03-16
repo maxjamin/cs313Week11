@@ -37,7 +37,7 @@ function getUser() {
 }
 
 function addToCart(){
-	var x = document.getElementById(one).innerHTML;
+	var x = document.getElementById("one").innerHTML;
 	console.log("Add to cart called " + x);
 }
 
