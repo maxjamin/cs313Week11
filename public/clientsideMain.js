@@ -44,7 +44,7 @@ function loadProductTable(results) {
 
 	for(var i=0; i<results.length; i++) {
 
-		console.log("TEST01");
+		console.log("TEST01" + results.length);
 		var linktoart = "/artWorkImages/" + results[i].linktoart;
 		var product = [results[i].name, results[i].description, 
 		"<img src='" + linktoart + "' width='250' height='250'>",
