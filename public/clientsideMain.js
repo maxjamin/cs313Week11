@@ -40,10 +40,12 @@ function loadProductTable(results) {
 	console.log("loadProductTable");
 	console.log(document.getElementById("productTable").rows[0]);
 
-	if(document.getElementById("productTable").length != null) {
-		for(var i=0; i<document.getElementById("productTable").length; i++) {
+	if(document.getElementById("productTable").rows[0].cells.length != null) {
+
+		console.log("REturned");
+		/*for(var i=0; i<document.getElementById("productTable").length; i++) {
 			document.getElementById("productTable").deleteRow(i);
-		}
+		}*/
 	}
 
 	var table = document.getElementById("productTable");
