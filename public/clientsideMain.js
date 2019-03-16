@@ -1,10 +1,10 @@
 
 
 function checkIfLoggedIn() {
-	var email = localStorage.("powerFull")
+	var email = localStorage.getItem("powerFull");
 	if(email)
 	{
-		console.log("User existis")
+		console.log("User existis");
 	}
 }
 
