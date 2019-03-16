@@ -9,7 +9,7 @@ const pool = new Pool({
 function getPersonFromDb(id, password, callback) {
 	console.log("Getting person from DB with : " + id);
 
-	var sql = "SELECT * FROM Customer WHERE username = $1::varchar AND login = $2::varchar";
+	var sql = "SELECT user_id, email, username FROM Customer WHERE username = $1::varchar AND login = $2::varchar";
 	var params = [id, password];
 
 	pool.query(sql, params, function(err, result) {
@@ -26,6 +26,14 @@ function getPersonFromDb(id, password, callback) {
 	});
 
 }
+
+
+
+
+
+
+
+
 
 module.exports = {
 	getPersonFromDb: getPersonFromDb
