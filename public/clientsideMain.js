@@ -11,6 +11,7 @@ function checkIfLoggedInOnLoad() {
 	}
 	document.getElementById("products").style.display = "none";
 	document.getElementById("userCart").style.display = "none";
+	document.getElementById("checkout").style.display = "none";
 }
 
 
