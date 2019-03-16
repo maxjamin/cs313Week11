@@ -38,15 +38,14 @@ function getUser() {
 
 function loadProductTable(results) {
 	console.log("loadProductTable");
-	console.log(document.getElementById("productTable").rows[0]);
 
-	if(document.getElementById("productTable").rows[0].cells.length != undefined) {
+	/*if(document.getElementById("productTable").rows[0].cells.length != undefined) {
 
 		console.log("REturned");
 		/*for(var i=0; i<document.getElementById("productTable").length; i++) {
 			document.getElementById("productTable").deleteRow(i);
-		}*/
-	}
+		}
+	}*/
 
 	var table = document.getElementById("productTable");
 	for(var i=0; i<results.length; i++) {
