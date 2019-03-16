@@ -48,7 +48,7 @@ function loadProductTable(results) {
 
 		var product = [results[i].name, results[i].description, 
 		"<img src='" + linktoart + "' width='250' height='250'>",
-		results[i].price, results[i].quantity, "<button onclick='addToCart(results[i].name)'>+</button>"]
+		results[i].price, results[i].quantity, "<button onclick='addToCart(results[i].name)'>+</button>"];
 		var prod = table.insertRow(0);
 		for(var i=0; i<6; i++) {
 			var one = prod.insertCell(i);
