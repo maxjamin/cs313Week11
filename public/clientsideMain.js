@@ -43,10 +43,17 @@ function loadProductTable(results) {
 
 	for(var i=0; i<results.length; i++) {
 		var row = table.insertRow(0);
-		var cell1 = row.insertCell(0);
-		var cell2 = row.insertCell(1);
-		cell1.innerHTML = "NEW CELL1";
-		cell2.innerHTML = "NEW CELL2"; 
+		var cell0 = row.insertCell(0);
+		var cell1 = row.insertCell(1);
+		var cell2 = row.insertCell(2);
+		var cell3 = row.insertCell(3);
+		var cell4 = row.insertCell(4);
+
+		cell0.innerHTML = results.name;
+		cell1.innerHTML = results.description; 
+		cell2.innerHTML = results.dimensions;
+		cell3.innerHTML = results.price;
+		cell4.innerHTML = results.quantity; 
 	}
 
 }
