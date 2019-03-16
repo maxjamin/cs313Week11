@@ -41,10 +41,7 @@ function loadProductTable(results) {
 
 	var table = document.getElementById("productTable");
 
-	for (var i=tables.length-1; i>=0;i-=1)
-   		if (tables[i]) tables[i].parentNode.removeChild(tables[i]);
 
-   	var table = document.getElementById("productTable");
 	for(var i=0; i<results.length; i++) {
 		var row = table.insertRow(0);
 		var cell0 = row.insertCell(0);
