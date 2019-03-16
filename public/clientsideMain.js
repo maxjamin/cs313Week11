@@ -11,6 +11,10 @@ function checkIfLoggedIn() {
 	}
 }
 
+function removeSessionVar() {
+	 sessionStorage.clear();
+}
+
 
 function getUser() {
 		console.log("getUser called");
@@ -21,7 +25,6 @@ function getUser() {
 
 		$.get("/logInUser", {userName:username, password:password}, function(data) {
 			console.log("DATA RETURNED: " + JSON.stringify(data));
-			console.log("Test01: " + x);
 			
 			$("#userLoginBar").append(data.username + " logged in");
 
