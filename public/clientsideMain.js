@@ -42,12 +42,6 @@ function loadProductTable(results) {
 
 	var table = document.getElementById("productTable");
 
-	var row = table.insertRow(0);
-	for(var i=0; i<6; i++) {
-		var one = row.insertCell(i)
-		one.innerHTML = "One";
-	}
-
 	for(var i=0; i<results.length; i++) {
 		var row = table.insertRow(0);
 		var cell0 = row.insertCell(0);
@@ -66,6 +60,13 @@ function loadProductTable(results) {
 		cell4.innerHTML = results[i].quantity; 
 		cell5.innerHTML = "<button onclick='addToCart(results[i].name)'>+</button>"; 
 	}
+
+	var row = table.insertRow(0);
+	for(var i=0; i<6; i++) {
+		var one = row.insertCell(i)
+		one.innerHTML = "One";
+	}
+
 
 }
 
