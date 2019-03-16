@@ -38,6 +38,10 @@ function getUser() {
 
 function loadProductTable(results) {
 	console.log("loadProductTable");
+
+	var Table = document.getElementById("productTable");
+
+	console.log("length " + results.length);
 }
 
 
