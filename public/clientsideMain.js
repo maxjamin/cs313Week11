@@ -41,6 +41,11 @@ function loadProductTable(results) {
 
 	var table = document.getElementById("productTable");
 
+
+	for(var j=0;j<results.leght;j++) {
+		document.getElementById("productTable").deleteCell(j);
+	}
+
 	for(var i=0; i<results.length; i++) {
 		var row = table.insertRow(0);
 		var cell0 = row.insertCell(0);
