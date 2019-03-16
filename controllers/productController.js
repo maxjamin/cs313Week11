@@ -11,7 +11,7 @@ function getProducts(request, response) {
 			console.log("RESULT ARE: " + result);
 			
 			//response.write(JSON.stringify(person));
-			response.json(person);
+			response.json(result);
 		}
 	});
 	console.log("Test03");
