@@ -46,20 +46,21 @@ function loadProductTable(results) {
 		var cell0 = row.insertCell(0);
 		var cell1 = row.insertCell(1);
 		var cell2 = row.insertCell(2);
-		var cell3 = row.insertCell(3);
+		var cell3= row.insertCell(3)
 		var cell4 = row.insertCell(4);
 		var cell5 = row.insertCell(5);
+		var cell6 = row.insertCell(6);
 
 		cell0.innerHTML = results[i].name;
 		cell1.innerHTML = results[i].description; 
 		cell2.innerHTML = results[i].dimensions;
-		cell3.innerHTML = results[i].price;
-		cell4.innerHTML = results[i].quantity; 
-		cell5.innerHTML = "<button onclick='addTOCart(results[i].name)'>+</button>"; 
+		cell3.innerHTML = "<img scr='/results[i].linktoart' alt='results[i].dimensions'>"
+		cell4.innerHTML = results[i].price;
+		cell5.innerHTML = results[i].quantity; 
+		cell6.innerHTML = "<button onclick='addTOCart(results[i].name)'>+</button>"; 
 	}
 
 }
-
 
 function getProducts() {
 
