@@ -43,9 +43,7 @@ function loadProductTable(results) {
 	var table = document.getElementById("productTable");
 
 	for(var i=0; i<results.length; i++) {
-		console.log("TEST99");
 		var linktoart = "/artWorkImages/" + results[i].linktoart;
-
 		var product = [results[i].name, results[i].description, 
 		"<img src='" + linktoart + "' width='250' height='250'>",
 		results[i].price, results[i].quantity, "<button onclick='addToCart(results[i].name)'>+</button>"];
@@ -56,22 +54,6 @@ function loadProductTable(results) {
 			one.innerHTML = product[k];
 
 		}
-		/*var row = table.insertRow(0);
-		var cell0 = row.insertCell(0);
-		var cell1 = row.insertCell(1);
-		var cell2= row.insertCell(2)
-		var cell3 = row.insertCell(3);
-		var cell4 = row.insertCell(4);
-		var cell5 = row.insertCell(5);
-
-		var linktoart = "/artWorkImages/" + results[i].linktoart;
-
-		cell0.innerHTML = results[i].name;
-		cell1.innerHTML = results[i].description; 
-		cell2.innerHTML = "<img src='" + linktoart + "' width='250' height='250'>";
-		cell3.innerHTML = results[i].price;
-		cell4.innerHTML = results[i].quantity; 
-		cell5.innerHTML = "<button onclick='addToCart(results[i].name)'>+</button>"; */
 	}
 
 	var title = ["Name", "Description", "Image", "Amount", "Qt:", "Add to Cart"]; 
@@ -82,6 +64,10 @@ function loadProductTable(results) {
 	}
 
 
+}
+
+function addToCart(item){
+	console.log("Add to cart called");
 }
 
 function getProducts() {
