@@ -49,11 +49,11 @@ function loadProductTable(results) {
 		var cell3 = row.insertCell(3);
 		var cell4 = row.insertCell(4);
 
-		cell0.innerHTML = results.name;
-		cell1.innerHTML = results.description; 
-		cell2.innerHTML = results.dimensions;
-		cell3.innerHTML = results.price;
-		cell4.innerHTML = results.quantity; 
+		cell0.innerHTML = results[i].name;
+		cell1.innerHTML = results[i].description; 
+		cell2.innerHTML = results[i].dimensions;
+		cell3.innerHTML = results[i].price;
+		cell4.innerHTML = results[i].quantity; 
 	}
 
 }
