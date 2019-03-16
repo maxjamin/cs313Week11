@@ -38,9 +38,10 @@ function getUser() {
 
 function loadProductTable(results) {
 	console.log("loadProductTable");
+	console.log(document.getElementById("productTable").length);
 
 	if(document.getElementById("productTable").length != null) {
-		for(var i=0; i<results.length; i++) {
+		for(var i=0; i<document.getElementById("productTable").length; i++) {
 			document.getElementById("productTable").deleteRow(i);
 		}
 	}
