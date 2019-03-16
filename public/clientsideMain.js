@@ -37,7 +37,7 @@ function getUser() {
 }
 
 function addToCart(item){
-	console.log("Add to cart called");
+	console.log("Add to cart called " + item);
 }
 
 
