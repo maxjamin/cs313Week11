@@ -38,7 +38,7 @@ function getUser() {
 
 function addToCart(result01, id){
 	
-	console.log("Add to cart called " + result);
+	console.log("Add to cart called " + result01 + " " + id);
 }
 
 
