@@ -36,12 +36,18 @@ function getUser() {
 
 }
 
+function loadProductTable(results) {
+	console.log("loadProductTable");
+}
+
+
 function getProducts() {
 
 	$.get("/getProducts", function(data) {
 
 		console.log("Back from sever: ");
 		console.log(data);
+		loadProductTable(data);
 	})
 }
 
