@@ -6,7 +6,7 @@ function getProducts(request, response) {
 		//callback function
 		console.log("Test06");
 		if (error || result == null || result.length != 1) {
-			console.log("ERROR09");
+			console.log("ERROR09" + error + " - " + result + " - " + result.length );
 			response.status(500).json({success: false, data: error});
 		} else {
 			console.log("RESULT ARE: " + result);
