@@ -1,7 +1,11 @@
 
 
 function checkIfLoggedIn() {
-
+	var email = localStorage.("powerFull")
+	if(email)
+	{
+		console.log("User existis")
+	}
 }
 
 function getUser() {
@@ -23,5 +27,5 @@ function getUser() {
 
 		/*If user is their, log in and hide log in form*/
 		document.getElementById("loginForm").style.display = "none";
-		localStorage.setItem()
+		localStorage.setItem(x.username,x.email);
 }
