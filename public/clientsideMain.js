@@ -39,7 +39,7 @@ function getUser() {
 function loadProductTable(results) {
 	console.log("loadProductTable");
 
-	var Table = document.getElementById("productTable");
+	var table = document.getElementById("productTable");
 
 	for(var i=0; i<results.length; i++) {
 		var row = table.insertRow(0);
