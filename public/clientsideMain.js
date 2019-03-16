@@ -4,7 +4,7 @@ function checkIfLoggedIn() {
 	var username = localStorage.getItem("userLogin");
 	if(username != "")
 	{
-		console.log("User exists");
+		console.log("User exists" + username);
 
 		$("#userLoginBar").append(username + " logged in");
 		document.getElementById("loginForm").style.display = "none";
