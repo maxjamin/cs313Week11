@@ -51,8 +51,8 @@ function loadProductTable(results) {
 		results[i].price, results[i].quantity, "<button onclick='addToCart(results[i].name)'>+</button>"]
 		var prod = table.insertRow(0);
 		for(var i=0; i<6; i++) {
-			var one = prod.insertCell(i)
-			one.innerHTML = product[i]
+			var one = prod.insertCell(i);
+			one.innerHTML = product[i];
 
 		}
 		/*var row = table.insertRow(0);
