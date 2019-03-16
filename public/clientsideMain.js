@@ -39,7 +39,7 @@ function getUser() {
 function loadProductTable(results) {
 	console.log("loadProductTable");
 
-	if(document.getElementById("productTable").row[0] != null) {
+	if(document.getElementById("productTable").length != null) {
 		for(var i=0; i<results.length; i++) {
 			document.getElementById("productTable").deleteRow(i);
 		}
