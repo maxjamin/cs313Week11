@@ -37,7 +37,11 @@ function getUser() {
 }
 
 function addToCart(result01, id){
-	
+	for(var i in localStorage) {
+	    console.log('Local Storage: ' + i + ' = ' + localStorage[i]);
+	}	
+
+
 	console.log("Add to cart called " + result01 + " " + id);
 	var key = result01+"-"+id;
 
