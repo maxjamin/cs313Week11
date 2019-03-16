@@ -19,6 +19,9 @@
   background-color: #ddd;
   color: black;
 }
+.topnav-right {
+  float: right;
+}
 
 
 body {
