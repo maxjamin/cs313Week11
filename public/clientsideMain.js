@@ -43,7 +43,7 @@ function loadProductTable(results) {
 	var table = document.getElementById("productTable");
 
 	for(var i=0; i<results.length; i++) {
-
+		console.log("TEST99");
 		var linktoart = "/artWorkImages/" + results[i].linktoart;
 
 		var product = [results[i].name, results[i].description, 
