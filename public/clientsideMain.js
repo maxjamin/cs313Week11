@@ -34,3 +34,23 @@ function getUser() {
 		})
 
 }
+
+function loadProducts() {
+
+	document.getElementById("products").style.display = "block";
+	document.getElementById("userCart").style.display = "none";
+	document.getElementById("checkout").style.display = "none";
+}
+
+function loadCart() {
+	document.getElementById("products").style.display = "none";
+	document.getElementById("userCart").style.display = "block";
+	document.getElementById("checkout").style.display = "none";
+}
+
+loadCheckout() {
+	document.getElementById("products").style.display = "none";
+	document.getElementById("userCart").style.display = "none";
+	document.getElementById("checkout").style.display = "block";
+
+}
