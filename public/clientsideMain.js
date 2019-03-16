@@ -46,7 +46,7 @@ function loadProductTable(results) {
 			document.getElementById("productTable").deleteRow(i);
 		}
 	}*/
-	$("#productTable").remove();
+	$("#productTable tr").remove();
 
 	var table = document.getElementById("productTable");
 	for(var i=0; i<results.length; i++) {
