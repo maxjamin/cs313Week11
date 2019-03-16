@@ -41,7 +41,7 @@ function addToCart(result01, id){
 	console.log("Add to cart called " + result01 + " " + id);
 	var key = result01+"-"+id;
 
-	if(localStorage.getItem(key) == "")
+	if(localStorage.getItem(key) == null)
 	{
 		console.log("First");
 	}
