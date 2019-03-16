@@ -49,6 +49,7 @@ function loadProductTable(results) {
 		var cell3 = row.insertCell(3);
 		var cell4 = row.insertCell(4);
 		var cell5 = row.insertCell(5);
+		console.log("link: " + results[i].linktoart);
 
 		cell0.innerHTML = results[i].name;
 		cell1.innerHTML = results[i].description; 
