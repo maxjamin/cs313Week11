@@ -36,7 +36,7 @@ function getUser() {
 
 }
 
-function addToCart(result){
+function addToCart(result01, id){
 	
 	console.log("Add to cart called " + result);
 }
@@ -53,7 +53,7 @@ function loadProductTable(results) {
 		var name = results[i].name;
 		var product = [results[i].name, results[i].description, 
 		"<img src='" + linktoart + "' width='250' height='250'>",
-		results[i].price, results[i].quantity, "<button onclick='addToCart(\""+ name +"\")'>+</button>"];
+		results[i].price, results[i].quantity, "<button onclick='addToCart(\""+ name +"\", \""+ results[i].artwork_id +"\")'>+</button>"];
 		var prod = table.insertRow(i);
 
 		//Add items to the row.
