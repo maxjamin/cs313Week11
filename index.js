@@ -25,7 +25,7 @@ express()
   })
   .get('/getProducts', (req, res) => {
 
-  	//productController.getProducts(req, res);
+  	productController.getProducts(req, res);
   	console.log("Test05")
   })
 
