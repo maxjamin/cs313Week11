@@ -12,7 +12,7 @@ function checkIfLoggedIn() {
 }
 
 function removeSessionVar() {
-	 sessionStorage.clear();
+	localStorage.clear();
 }
 
 
