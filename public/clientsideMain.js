@@ -39,6 +39,16 @@ function getUser() {
 function addToCart(result01, id){
 	
 	console.log("Add to cart called " + result01 + " " + id);
+	var key = result01+"-"+id;
+
+	if(localStorage.getItem(key) == "")
+	{
+		console.log("First");
+	}
+	else {
+		console.log("Add more");
+		localStorage.setItem(key,1);
+	}
 }
 
 
