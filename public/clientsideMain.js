@@ -55,7 +55,7 @@ function loadProductTable(results) {
 		cell2.innerHTML = results[i].dimensions;
 		cell3.innerHTML = results[i].price;
 		cell4.innerHTML = results[i].quantity; 
-		cell5.innerHTML = "<button onclick='addTOCart()'></button>"; 
+		cell5.innerHTML = "<button onclick='addTOCart(results[i].name)'>+</button>"; 
 	}
 
 }
