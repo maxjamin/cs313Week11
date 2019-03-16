@@ -8,7 +8,7 @@ function getProducts(request, response) {
 		if (error || result == null || result.length != 1) {
 			response.status(500).json({success: false, data: error});
 		} else {
-			var person = result[0];
+			console.log("RESULT ARE: " + result);
 			
 			//response.write(JSON.stringify(person));
 			response.json(person);
