@@ -4,9 +4,9 @@ function checkIfLoggedIn() {
 	var email = localStorage.getItem("powerFull");
 	if(email != "")
 	{
-		console.log("User existis");
+		console.log("User exists");
 
-		$("#userLoginBar").append(data.username + " logged in");
+		//$("#userLoginBar").append(data.username + " logged in");
 		document.getElementById("loginForm").style.display = "none";
 	}
 }
