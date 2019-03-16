@@ -15,13 +15,7 @@
 }
 
 /* Change the color of links on hover */
-.topBar .top:hover {
+.topBar button:hover {
   background-color: #ddd;
   color: black;
-}
-
-/* Add a color to the active/current link */
-.topBar .top.active {
-  background-color: #4CAF50;
-  color: white;
 }
