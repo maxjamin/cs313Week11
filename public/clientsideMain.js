@@ -38,14 +38,6 @@ function getUser() {
 
 function loadProductTable(results) {
 	console.log("loadProductTable");
-
-	/*if(document.getElementById("productTable").rows[0].cells.length != undefined) {
-
-		console.log("REturned");
-		/*for(var i=0; i<document.getElementById("productTable").length; i++) {
-			document.getElementById("productTable").deleteRow(i);
-		}
-	}*/
 	$("#productTable tr").remove();
 
 	var table = document.getElementById("productTable");
