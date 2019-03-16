@@ -1,4 +1,4 @@
-const userModel = require("../models/productModel.js");
+const productModel = require("../models/productModel.js");
 
 function getProducts(request, response) {
 
