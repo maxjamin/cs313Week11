@@ -52,7 +52,7 @@ function loadProductTable(results) {
 		var linktoart = "/artWorkImages/" + results[i].linktoart;
 		var product = [results[i].name, results[i].description, 
 		"<img src='" + linktoart + "' width='250' height='250'>",
-		results[i].price, results[i].quantity, "<button value="+results[i].name+"id='one' onclick='addToCart()'>+</button>"];
+		results[i].price, results[i].quantity, "<input type='submit' onclick='addToCart()'>"];
 		var prod = table.insertRow(i);
 
 		//Add items to the row.
