@@ -6,7 +6,7 @@ function checkIfLoggedIn() {
 	{
 		console.log("User exists" + username);
 
-		$("#userLoginBar").append(username + " logged in");
+		document.getElementById("userLoginBar").innerHTML = username + " logged in";
 		//document.getElementById("loginForm").style.display = "none";
 	}
 }
@@ -22,7 +22,7 @@ function getUser() {
 		$.get("/logInUser", {userName:username, password:password}, function(data) {
 			console.log("DATA RETURNED: " + JSON.stringify(data));
 			
-			$("#userLoginBar").append(data.username + " logged in");
+			document.getElementById("userLoginBar").innerHTML = data.username + " logged in";
 
 			/*If user is their, log in and hide log in form*/
 			document.getElementById("loginForm").style.display = "none";
