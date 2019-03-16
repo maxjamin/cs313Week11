@@ -2,7 +2,7 @@
 
 function checkIfLoggedIn() {
 	var email = localStorage.getItem("powerFull");
-	if(email)
+	if(email != "")
 	{
 		console.log("User existis");
 	}
@@ -23,9 +23,10 @@ function getUser() {
 			
 			$("#userLoginBar").append(data.username + " logged in");
 
+			/*If user is their, log in and hide log in form*/
+			document.getElementById("loginForm").style.display = "none";
+			localStorage.setItem(data.username,data.email);
+
 		})
 
-		/*If user is their, log in and hide log in form*/
-		document.getElementById("loginForm").style.display = "none";
-		localStorage.setItem(x.username,x.email);
 }
