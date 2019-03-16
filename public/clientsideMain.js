@@ -42,7 +42,7 @@ function loadProductTable(results) {
 	var table = document.getElementById("productTable");
 
 
-	for(var j=0;j<results.leght;j++) {
+	for(var j=0;j<results.legth;j++) {
 		document.getElementById("productTable").deleteCell(j);
 	}
 
