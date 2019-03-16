@@ -48,7 +48,7 @@ function loadCart() {
 	document.getElementById("checkout").style.display = "none";
 }
 
-loadCheckout() {
+function loadCheckout() {
 	document.getElementById("products").style.display = "none";
 	document.getElementById("userCart").style.display = "none";
 	document.getElementById("checkout").style.display = "block";
