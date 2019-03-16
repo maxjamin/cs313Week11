@@ -5,6 +5,9 @@ function checkIfLoggedIn() {
 	if(email != "")
 	{
 		console.log("User existis");
+
+		$("#userLoginBar").append(data.username + " logged in");
+		document.getElementById("loginForm").style.display = "none";
 	}
 }
 
