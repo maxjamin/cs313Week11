@@ -18,6 +18,7 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }))
+request.session = {};
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
