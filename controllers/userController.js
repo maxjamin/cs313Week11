@@ -4,7 +4,7 @@ const express = require('express')
 var session = require('express-session');
 var app = express()
 
-app.use(express.session({
+app.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: true,
@@ -25,7 +25,7 @@ function getPerson(request, response) {
 		} else {
 			var person = result[0];
 			
-			request.locals.session.one =1;
+			request.locals.session.one = 1;
 			console.log("Session " + request.session.one);
 
 			response.json(person);
