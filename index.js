@@ -13,15 +13,16 @@ const pool = new Pool({
 
 var app = express();
 var session = require('express-session')
-app.use(session({
-  secret: 'Threesfjkowf453454!',
-  resave: true,
-  saveUninitialized: true
-}))
+
 
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
+  .use(session({
+    secret: 'Threesfjkowf453454!',
+    resave: true,
+    saveUninitialized: true
+  }))
   .use(function (req, res, next) {
     if (!req.session.user) {
       console.log("Create session user")
