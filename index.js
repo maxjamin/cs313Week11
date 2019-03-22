@@ -67,6 +67,7 @@ express()
 
 function handleLogOut(request, response) {
     var result = {success: false};
+    console.log("in handleLogOut function.. ")
 
     if(request.session.user)
     {
