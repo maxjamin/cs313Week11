@@ -95,6 +95,16 @@ function getProducts() {
 	})
 }
 
+function getProductsForCart() {
+
+	$.get("/getProducts", function(data) {
+
+		console.log("Back from sever Cart: ");
+		console.log(data);
+		loadCartTable(data);
+	})
+}
+
 function logOut() {
 	$.get("/logOut", function(data) {
 
@@ -123,6 +133,8 @@ function loadCart() {
 	document.getElementById("products").style.display = "none";
 	document.getElementById("userCart").style.display = "block";
 	document.getElementById("checkout").style.display = "none";
+
+	getProductsForCart();
 }
 
 function loadCheckout() {
