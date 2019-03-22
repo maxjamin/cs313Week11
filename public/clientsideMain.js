@@ -94,6 +94,10 @@ function getProducts() {
 	})
 }
 
+function logOut() {
+
+}
+
 
 function loadProducts() {
 
@@ -116,3 +120,4 @@ function loadCheckout() {
 	document.getElementById("checkout").style.display = "block";
 
 }
+
