@@ -11,9 +11,8 @@ const pool = new Pool({
   ssl: true,
 });
 
-var parseurl = require('parseurl')
-var session = require('express-session')
-var app = express();
+var session = require('express-session');
+var app = express()
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
