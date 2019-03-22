@@ -102,6 +102,10 @@ function logOut() {
 		
 	})
 	document.getElementById("userLoginBar").innerHTML = "";
+	document.getElementById("loginForm").style.display = "block";
+	document.getElementById("products").style.display = "none";
+	document.getElementById("userCart").style.display = "none";
+	document.getElementById("checkout").style.display = "none";
 }
 
 
