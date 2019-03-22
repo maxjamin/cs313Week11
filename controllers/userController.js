@@ -1,4 +1,12 @@
 const userModel = require("../models/userModel.js");
+var session = require('express-session');
+var app = express()
+
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true
+}))
 
 function getPerson(request, response) {
 	// First get the person's id
@@ -15,6 +23,7 @@ function getPerson(request, response) {
 			var person = result[0];
 			
 			//response.write(JSON.stringify(person));
+			request.session.user = id;
 			response.json(person);
 		}
 	});
