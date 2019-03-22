@@ -1,5 +1,4 @@
 
-
 function checkIfLoggedInOnLoad() {
 	var username = localStorage.getItem("userLogin");
 	if(username != "")

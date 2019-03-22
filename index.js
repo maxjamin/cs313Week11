@@ -6,11 +6,12 @@ const userController = require("./controllers/userController.js");
 const productController = require("./controllers/productController.js");
 
 const { Pool } = require('pg');
-
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: true,
 });
+
+var session = require('express-session');
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
