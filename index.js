@@ -47,7 +47,7 @@ express()
     userController.getPerson(req, res);  
 
   })
-  .get('logOut', (req, res) => {
+  .get('/logOut', (req, res) => {
       handleLogOut(req,res);
   })
   .get('/addToCart', (req, res) => {
