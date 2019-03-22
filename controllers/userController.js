@@ -15,7 +15,7 @@ function getPerson(request, response) {
 	var id = request.query.userName;
 	var pssword = request.query.password;
 	var answer = 68;
-	var sn;
+
 
 	userModel.getPersonFromDb(id, pssword, function(error, result) {
 		//callback function
@@ -24,11 +24,11 @@ function getPerson(request, response) {
 			response.status(500).json({success: false, data: error});
 		} else {
 			var person = result[0];
-			
-			sn = request.session;
-			sn.username = request.username;
+			var one;
+			one=request.session;
+			one.user = person.username;
 
-			console.log("Session " + request.session);
+			console.log("Session " + request.session.one);
 
 			response.json(person);
 		}
