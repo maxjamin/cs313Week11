@@ -24,11 +24,11 @@ function getPerson(request, response) {
 			var person = result[0];
 			
 			//response.write(JSON.stringify(person));
+			request.session.user = request.query.userName;
 			response.json(person);
 		}
 	});
 	console.log("Test03");
-	request.session.user = request.query.userName;
 }
 
 
