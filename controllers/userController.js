@@ -24,10 +24,8 @@ function getPerson(request, response) {
 			response.status(500).json({success: false, data: error});
 		} else {
 			var person = result[0];
-			var one;
-			one=request.session;
-			one.user = person.username;
-
+			
+			request.locals.session.one =1;
 			console.log("Session " + request.session.one);
 
 			response.json(person);
