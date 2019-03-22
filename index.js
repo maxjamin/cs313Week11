@@ -19,6 +19,11 @@ app.use(session({
   saveUninitialized: true
 }))
 
+app.use(function (req, res, next) {
+  if (!req.session.user) {
+    req.session.user = {}
+  }
+})
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
