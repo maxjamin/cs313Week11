@@ -11,21 +11,16 @@ const pool = new Pool({
   ssl: true,
 });
 
-var session = require('express-session');
-var FileStore = require('session-file-store')(session);
+var parseurl = require('parseurl')
+var session = require('express-session')
+express.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true
+}))
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
-  .use(require('morgan')('dev'));
-  .use(session({
-  name: 'server-session-cookie-id',
-  secret: 'my express secret',
-  saveUninitialized: true,
-  resave: true,
-  store: new FileStore()
-  }));
-
-
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
