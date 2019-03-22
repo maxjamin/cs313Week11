@@ -19,6 +19,14 @@ app.use(session({
   saveUninitialized: true
 }))
 
+
+app.use(function (req, res, next) {
+  if (!req.session.views) {
+    req.session.user = {}
+  }
+  next();
+}
+
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
