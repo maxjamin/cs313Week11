@@ -7,7 +7,8 @@ var app = express()
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: true,
+  user: ""
 }))
 
 function getPerson(request, response) {
