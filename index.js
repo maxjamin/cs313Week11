@@ -75,10 +75,12 @@ function addObjectToCart(request, response) {
   //check to see if they need to add one, or add to the remaining qt
   if(!request.session.view[qt])
   {
-    request.session.view[qt] = 11;
+    request.session.view[qt] = 01;
   }else
   {
-
+    var quant = request.session.view[qt];
+    quant = 1+quant;
+    request.session.view[qt] = quant;
   }
 
 
