@@ -1,13 +1,5 @@
 
 function checkIfLoggedInOnLoad() {
-
-	$.get("/checkIfLoggedIn", function(data) {
-
-		console.log("Back from sever: ");
-		console.log(data);
-		loadProductTable(data);
-	})
-
 	/*var username = localStorage.getItem("userLogin");
 	if(username != "")
 	{
