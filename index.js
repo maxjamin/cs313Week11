@@ -21,7 +21,7 @@ app.use(session({
 
 
 app.use(function (req, res, next) {
-  if (!req.session.views) {
+  if (!req.session.user) {
     req.session.user = {}
   }
   next();
@@ -57,7 +57,7 @@ function checkIfLoggedIn(request, response) {
   var result = {success: true};
 
 
-  if(request.session) {
+  if(request.session.user) {
     console.log("Logged in");
   }
   else{
