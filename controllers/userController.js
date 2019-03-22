@@ -9,11 +9,12 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }))
+
 app.use(function (req, res, next) {
   if (!req.session.user) {
     req.session.user = {}
   }
-
+}
 function getPerson(request, response) {
 	// First get the person's id
 	var id = request.query.userName;
