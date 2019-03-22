@@ -42,7 +42,7 @@ function getUser() {
 
 		})
 
-		$.get("/logIn", user, function(data) {
+		$.get("/logIn", {user:user }, function(data) {
 
 				console.log("Back from login: ");
 				console.log(data);
