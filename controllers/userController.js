@@ -1,5 +1,5 @@
 const userModel = require("../models/userModel.js");
-const index = require("./index.js");
+const index = require("../index.js");
 const express = require('express')
 
 
@@ -18,7 +18,7 @@ function getPerson(request, response) {
 		} else {
 			var person = result[0];
 			
-			response.session.user = person.username;
+			request.session.user = person.username;
 			console.log("Session " + request.session.user);
 
 			response.json(person);
