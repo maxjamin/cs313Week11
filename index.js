@@ -51,6 +51,8 @@ function checkIfLoggedIn(request, response) {
   if(request.session.user) {
     console.log("Logged in");
   }
-  response.json(result);
-
+  else{
+    var result = {success:false, message:"Not logged in"};
+    response.json(401).json(result);
+  }
 }
