@@ -31,13 +31,20 @@ function getUser() {
 
 		$.get("/logInUser", {userName:username, password:password}, function(data) {
 			console.log("DATA RETURNED: " + JSON.stringify(data));
-			
-			document.getElementById("userLoginBar").innerHTML = data.username + " logged in";
 
-			/*If user is their, log in and hide log in form*/
+			$.get("/logIn", function(data.username) {
+
+				console.log("Back from sever: ");
+				console.log(data);
+				loadProductTable(data);
+			})
+			
+			/*document.getElementById("userLoginBar").innerHTML = data.username + " logged in";
+
+			//If user is their, log in and hide log in form
 			document.getElementById("loginForm").style.display = "none";
 			localStorage.setItem("userLogin", data.username);
-			localStorage.setItem("userEmail", data.email);
+			localStorage.setItem("userEmail", data.email);*/
 
 		})
 

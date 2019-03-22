@@ -42,6 +42,11 @@ express()
     checkIfLoggedIn()
     console.log("Test06")
   })
+  .get('/logIn', (req, res) => {
+
+    logIn()
+    console.log("Test07")
+  })
 
 
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
@@ -54,4 +59,8 @@ function checkIfLoggedIn() {
     console.log("Logged in");
   }
 
+}
+
+function logIn(data) {
+  req.session.views["userLogin"] = data;
 }
