@@ -32,7 +32,7 @@ function getUser() {
 		$.get("/logInUser", {userName:username, password:password}, function(data) {
 			console.log("DATA RETURNED: " + JSON.stringify(data));
 
-			$.get("/logIn", function(data.username) {
+			$.get("/logIn", data.username ,function(data) {
 
 				console.log("Back from sever: ");
 				console.log(data);
