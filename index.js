@@ -20,8 +20,8 @@ app.use(session({
 }))
 
 app.use(function (req, res, next) {
-  if (!req.session) {
-    req.session = {}
+  if (!req.session.user) {
+    req.session.user = {}
   }
   next()
 })
