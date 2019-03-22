@@ -66,11 +66,12 @@ express()
 
 
 function addObjectToCart(request, response) {
-  console.log("starting addObjectToCart" + request.query.result01);
+  console.log("starting addObjectToCart" + request.query.result01 +
+    " " + request.query.id);
 
 
-  request.session.view[request.id] = request.query.result01;
-  console.log("Data of cart: " + request.session.view[request.id]);
+  request.session.view[request.query.id] = request.query.result01;
+  console.log("Data of cart: " + request.session.view[request.query.id]);
 
 
 
