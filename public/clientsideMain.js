@@ -1,17 +1,15 @@
 
 function checkIfLoggedInOnLoad() {
 	$.get("/checkIfLoggedIn", function(data) {
-			console.log("DATA RETURNED 02: " + JSON.stringify(data));
+		console.log("DATA RETURNED 02: " + JSON.stringify(data));
 			
+		if(data) {
+			document.getElementById("userLoginBar").innerHTML = username + " logged in";
+			document.getElementById("loginForm").style.display = "none";
+		}else {
+			document.getElementById("loginForm").style.display = "block";
+		}	
 	});
-	console.log("DATA: " + data[0])
-
-	if(data) {
-		document.getElementById("userLoginBar").innerHTML = username + " logged in";
-		document.getElementById("loginForm").style.display = "none";
-	}else {
-		document.getElementById("loginForm").style.display = "block";
-	}
 
 	document.getElementById("products").style.display = "none";
 	document.getElementById("userCart").style.display = "none";
