@@ -47,16 +47,17 @@ express()
     userController.getPerson(req, res);  
 
   })
+  .get('logOut', (req, res) => {
+      handleLogOut(req,res);
+  })
   .get('/addToCart', (req, res) => {
       addObjectToCart(req, res);
   })
-
   .get('/getProducts', (req, res) => {
 
   	productController.getProducts(req, res);
   	console.log("Test05")
   })
-
  .get('/checkIfLoggedIn', (req, res) => {
 
     checkIfLoggedIn(req, res)
@@ -64,6 +65,16 @@ express()
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
+function handleLogOut(request, response) {
+    var result = {success: false};
+
+    if(request.session.user)
+    {
+      request.session.destroy();
+      result = {success: true};
+    }
+    response.json(results)
+}
 
 function addObjectToCart(request, response) {
   console.log("starting addObjectToCart" + request.query.result01 +

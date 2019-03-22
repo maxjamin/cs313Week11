@@ -95,7 +95,13 @@ function getProducts() {
 }
 
 function logOut() {
+	$.get("/logOut", function(data) {
 
+		console.log("Back from sever: ");
+		console.log(data);
+		
+	})
+	document.getElementById("userLoginBar").innerHTML = "";
 }
 
 
