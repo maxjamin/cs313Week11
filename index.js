@@ -13,7 +13,8 @@ const pool = new Pool({
 
 var parseurl = require('parseurl')
 var session = require('express-session')
-express.use(session({
+var app = express();
+app.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: true
