@@ -44,7 +44,7 @@ express()
   })
   .get('/logIn', (req, res) => {
 
-    logIn()
+    logIn(req)
     console.log("Test07")
   })
 
