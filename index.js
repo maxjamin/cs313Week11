@@ -11,13 +11,16 @@ const pool = new Pool({
   ssl: true,
 });
 
+app.use(require('morgan')('dev'));
 var session = require('express-session');
-var app = express()
+var FileStore = require('session-file-store')(session);
 app.use(session({
-  secret: 'keyboard cat',
-  resave: false,
-  saveUninitialized: true
-}))
+  name: 'server-session-cookie-id',
+  secret: 'my express secret',
+  saveUninitialized: true,
+  resave: true,
+  store: new FileStore()
+}));
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
