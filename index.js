@@ -28,8 +28,10 @@ express()
   .get('/main', (req, res) => res.render('pages/main'))
   .get('/logInUser', (req, res) => {
 
-	userController.getPerson(req, res);
-	console.log("Test04")		
+    userController.getPerson(req, res);
+    console.log("Test04 " + res.userName)
+    res.send["userName"] = res.userName;
+
   })
   .get('/getProducts', (req, res) => {
 
@@ -42,13 +44,6 @@ express()
     checkIfLoggedIn()
     console.log("Test06")
   })
-  .get('/logIn', (req, res) => {
-
-    logIn(req)
-    console.log("Test07")
-  })
-
-
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 
@@ -59,9 +54,4 @@ function checkIfLoggedIn() {
     console.log("Logged in");
   }
 
-}
-
-function logIn(data) {
-  req.session.views["userLogin"] = data;
-  res.send();
 }

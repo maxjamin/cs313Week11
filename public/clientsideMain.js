@@ -28,11 +28,10 @@ function getUser() {
 		var username = $("#userName").val();
 		var password = $("#password").val();
 		console.log("The user" +  username + password);
-		var user;
-
+		
 		$.get("/logInUser", {userName:username, password:password}, function(data) {
 			console.log("DATA RETURNED: " + JSON.stringify(data));
-			user = data.username;
+			
 			/*document.getElementById("userLoginBar").innerHTML = data.username + " logged in";
 
 			//If user is their, log in and hide log in form
@@ -40,12 +39,6 @@ function getUser() {
 			localStorage.setItem("userLogin", data.username);
 			localStorage.setItem("userEmail", data.email);*/
 
-		})
-
-		$.get("/logIn", {user:user }, function(data) {
-
-				console.log("Back from login: ");
-				console.log(data);
 		})
 
 }
