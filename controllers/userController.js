@@ -24,7 +24,7 @@ function getPerson(request, response) {
 			var person = result[0];
 			
 			//response.write(JSON.stringify(person));
-			request.session = "TEST01";
+			request.session.user = "TEST01";
 			response.json(person);
 		}
 	});

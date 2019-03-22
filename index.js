@@ -46,9 +46,9 @@ express()
 
 
 function checkIfLoggedIn(request, response) {
-  var result = {success: false};
+  var result = {success: true};
 
-  if(request.session) {
+  if(request.session.user) {
     console.log("Logged in");
   }
   response.json(result);
