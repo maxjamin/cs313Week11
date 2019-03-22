@@ -39,13 +39,13 @@ express()
 
  .get('/checkIfLoggedIn', (req, res) => {
 
-    checkIfLoggedIn(req)
+    checkIfLoggedIn(req, res)
     console.log("Test06")
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 
-function checkIfLoggedIn(request) {
+function checkIfLoggedIn(request, response) {
   var result = {success: false};
 
   if(request.session == "TEST01")
