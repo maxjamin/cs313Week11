@@ -30,20 +30,6 @@ function getPerson(request, response) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 module.exports = {
 	getPerson: getPerson
 };
