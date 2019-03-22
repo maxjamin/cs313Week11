@@ -39,6 +39,10 @@ express()
     userController.getPerson(req, res);  
 
   })
+  .get('/addToCart', (req, res) => {
+      addObjectToCart(req);
+  })
+
   .get('/getProducts', (req, res) => {
 
   	productController.getProducts(req, res);
@@ -52,6 +56,11 @@ express()
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
+
+function addObjectToCart(request) {
+
+  Console.log("Request " + request);
+}
 
 function checkIfLoggedIn(request, response) {
   var result;

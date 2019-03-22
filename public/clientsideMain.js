@@ -39,21 +39,9 @@ function getUser() {
 }
 
 function addToCart(result01, id){
-	for(var i in localStorage) {
-	    console.log('Local Storage: ' + i + ' = ' + localStorage[i]);
-	}	
+	$.get("/addToCart", function(data) {
+		console.log("Data returned" + JSON.stringify(data));
 
-
-	console.log("Add to cart called " + result01 + " " + id);
-	var key = result01+"-"+id;
-
-	if(localStorage.getItem(key) == null)
-	{
-		console.log("First");
-	}
-	else {
-		console.log("Add more");
-		localStorage.setItem(key,1);
 	}
 }
 
