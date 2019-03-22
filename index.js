@@ -30,6 +30,14 @@ express()
     }
     next()
   })
+  .use(function (req, res, next) {
+    if (!req.session.view[request.id]) {
+      console.log("Create session user")
+      req.session.view[request.id] = {}
+    }
+    next()
+  })
+
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
@@ -40,7 +48,7 @@ express()
 
   })
   .get('/addToCart', (req, res) => {
-      addObjectToCart(req);
+      addObjectToCart(req, res);
   })
 
   .get('/getProducts', (req, res) => {
@@ -57,9 +65,16 @@ express()
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 
-function addObjectToCart(request) {
+function addObjectToCart(request, response) {
+  console.log("starting addObjectToCart");
 
-  console.log("Request ");
+
+  request.session.view[request.id] = request.result01;
+
+
+
+  var result = {success: true};
+  response.send(result);
 }
 
 function checkIfLoggedIn(request, response) {
