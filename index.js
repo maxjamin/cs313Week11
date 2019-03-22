@@ -25,7 +25,7 @@ app.use(function (req, res, next) {
     req.session.user = {}
   }
   next();
-}
+})
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
