@@ -19,7 +19,7 @@ function getPerson(request, response) {
 			var person = result[0];
 			
 
-			//request.session.user = person.username;
+			request.session.user = person.username;
 			//console.log("Session " + request.session.user);
 
 			response.json(person);
