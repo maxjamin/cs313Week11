@@ -8,7 +8,7 @@ function getPerson(request, response) {
 	var answer = 68;
 
 
-	userModel.getPersonFromDb(id, pssword, function(request, error, result) {
+	userModel.getPersonFromDb(id, pssword, function(error, result) {
 		//callback function
 		console.log("Test01" + answer);
 		if (error || result == null || result.length != 1) {
@@ -16,7 +16,7 @@ function getPerson(request, response) {
 		} else {
 			var person = result[0];
 			
-			request.session.user = person.username;
+			result.session.user = person.username;
 			console.log("Session " + request.session.user);
 
 			response.json(person);
