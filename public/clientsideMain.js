@@ -84,6 +84,10 @@ function loadProductTable(results) {
 
 }
 
+function loadCartTable(results) {
+	console.log("Starting loadCartTable...");
+}
+
 
 function getProducts() {
 
