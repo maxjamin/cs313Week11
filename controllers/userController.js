@@ -25,6 +25,7 @@ function getPerson(request, response) {
 		} else {
 			var person = result[0];
 			
+			request.session = {};
 			request.session.user = person.username;
 			console.log("Session " + request.session.user);
 
