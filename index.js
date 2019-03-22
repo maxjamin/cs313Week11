@@ -14,10 +14,17 @@ const pool = new Pool({
 var app = express();
 var session = require('express-session')
 app.use(session({
-  secret: 'my-super-secret-secret!',
-  resave: false,
+  secret: 'Threesfjkowf453454!',
+  resave: true,
   saveUninitialized: true
 }))
+
+app.use(function (req, res, next) {
+  if (!req.session) {
+    req.session = {}
+  }
+  next()
+})
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
@@ -27,8 +34,7 @@ express()
   .get('/main', (req, res) => res.render('pages/main'))
   .get('/logInUser', (req, res) => {
 
-    userController.getPerson(req, res);
-    req.session.user = "billmaxer";  
+    userController.getPerson(req, res);  
 
   })
   .get('/getProducts', (req, res) => {
