@@ -25,8 +25,8 @@ function getPerson(request, response) {
 			var person = result[0];
 			
 			//response.write(JSON.stringify(person));
-			if(typeof request.session.user === 'undefined') {
-				request.session.user = 1;
+			if(typeof request.session === 'undefined') {
+				request.session = 1;
 			}	
 
 
