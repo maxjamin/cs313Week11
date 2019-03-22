@@ -59,7 +59,7 @@ express()
 
 function addObjectToCart(request) {
 
-  Console.log("Request " + request);
+  console.log("Request " + request);
 }
 
 function checkIfLoggedIn(request, response) {
