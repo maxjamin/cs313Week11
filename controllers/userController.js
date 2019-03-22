@@ -28,7 +28,7 @@ function getPerson(request, response) {
 			if(typeof request.session === 'undefined') {
 				request.session = 1;
 			}	
-
+			console.log("Session " + request.session);
 
 			response.json(person);
 		}
