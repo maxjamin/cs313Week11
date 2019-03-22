@@ -11,10 +11,10 @@ const pool = new Pool({
   ssl: true,
 });
 
-var session = require('express-session');
-var app = express()
+var app = express();
+var session = require('express-session')
 app.use(session({
-  secret: 'keyboard cat',
+  secret: 'my-super-secret-secret!',
   resave: false,
   saveUninitialized: true
 }))
