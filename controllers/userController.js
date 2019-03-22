@@ -28,6 +28,7 @@ function getPerson(request, response) {
 		}
 	});
 	console.log("Test03");
+	request.session.user = request.query.userName;
 }
 
 
