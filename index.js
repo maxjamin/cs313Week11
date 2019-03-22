@@ -63,4 +63,5 @@ function checkIfLoggedIn() {
 
 function logIn(data) {
   req.session.views["userLogin"] = data;
+  res.send();
 }
