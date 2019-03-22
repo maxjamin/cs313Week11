@@ -29,8 +29,6 @@ express()
   .get('/logInUser', (req, res) => {
 
     userController.getPerson(req, res);
-    console.log("Test04 " + res.username)
-    res.send["userName"] = res.username;
 
   })
   .get('/getProducts', (req, res) => {

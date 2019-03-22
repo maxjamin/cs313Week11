@@ -15,6 +15,7 @@ function getPerson(request, response) {
 			var person = result[0];
 			
 			//response.write(JSON.stringify(person));
+			res.send["userName"] = result.username;
 			response.json(person);
 		}
 	});
