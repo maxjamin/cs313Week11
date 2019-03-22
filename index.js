@@ -39,15 +39,15 @@ express()
 
  .get('/checkIfLoggedIn', (req, res) => {
 
-    checkIfLoggedIn()
+    checkIfLoggedIn(req)
     console.log("Test06")
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 
-function checkIfLoggedIn() {
+function checkIfLoggedIn(request) {
 
-  if(req.session)
+  if(request.session)
   {
     console.log("Logged in");
   }
