@@ -1,7 +1,6 @@
 const userModel = require("../models/userModel.js");
 const express = require('express')
 
-
 function getPerson(request, response) {
 	// First get the person's id
 	var id = request.query.userName;
