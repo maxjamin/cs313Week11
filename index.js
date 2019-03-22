@@ -54,15 +54,15 @@ express()
 
 
 function checkIfLoggedIn(request, response) {
-  var result = {success: true};
-
+  var result;
 
   if(request.session.user) {
     console.log("Logged in");
+    var result = {success: true};
   }
   else{
     console.log("Not logged in");
     var result = {success:false, message:"Not logged in"};
-    response.send(result);
   }
+  response.send(result);
 }
