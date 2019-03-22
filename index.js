@@ -19,16 +19,16 @@ app.use(session({
   saveUninitialized: true
 }))
 
-app.use(function (req, res, next) {
-  if (!req.session.user) {
-    console.log("Create session user")
-    req.session.user = {}
-  }
-  next()
-})
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
+  .use(function (req, res, next) {
+    if (!req.session.user) {
+      console.log("Create session user")
+      req.session.user = {}
+    }
+    next()
+  })
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
