@@ -39,7 +39,7 @@ express()
 
 function checkIfLoggedIn() {
 
-  if(req.session.views["userLogin"])
+  if(req.session)
   {
     console.log("Logged in");
   }

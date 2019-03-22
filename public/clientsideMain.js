@@ -8,6 +8,13 @@ function checkIfLoggedInOnLoad() {
 		document.getElementById("userLoginBar").innerHTML = username + " logged in";
 		document.getElementById("loginForm").style.display = "none";
 	}*/
+
+	var one;
+	$.get("/checkIfLoggedIn", function() {
+			console.log("DATA RETURNED: " + JSON.stringify(data));
+			
+	});
+
 	document.getElementById("products").style.display = "none";
 	document.getElementById("userCart").style.display = "none";
 	document.getElementById("checkout").style.display = "none";
