@@ -11,15 +11,6 @@ const pool = new Pool({
   ssl: true,
 });
 
-var session = require('express-session');
-var app = express()
-
-app.use(session({
-  secret: 'keyboard cat',
-  resave: false,
-  saveUninitialized: true
-}))
-
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
@@ -29,7 +20,7 @@ express()
   .get('/logInUser', (req, res) => {
 
     userController.getPerson(req, res);
-    req.session.user = "one";
+
 
   })
   .get('/getProducts', (req, res) => {
