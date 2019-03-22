@@ -42,7 +42,7 @@ function addToCart(result01, id){
 	$.get("/addToCart", function(data) {
 		console.log("Data returned" + JSON.stringify(data));
 
-	}
+	})
 }
 
 
