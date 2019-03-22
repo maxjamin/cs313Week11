@@ -1,5 +1,5 @@
 const userModel = require("../models/userModel.js");
-const index = require("../index.js");
+const index = require("./index.js");
 const express = require('express')
 
 
