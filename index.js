@@ -46,10 +46,12 @@ express()
 
 
 function checkIfLoggedIn(request) {
+  var result = {success: false};
 
-  if(request.session)
+  if(request.session == "TEST01")
   {
     console.log("Logged in");
   }
+  response.json(result);
 
 }
