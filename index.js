@@ -69,11 +69,22 @@ function addObjectToCart(request, response) {
   console.log("starting addObjectToCart" + request.query.result01 +
     " " + request.query.id);
 
+  var qt = request.query.id + "qt";
 
   request.session.view[request.query.id] = request.query.result01;
+  //check to see if they need to add one, or add to the remaining qt
+  if(request.session.view[qt])
+  {
+    request.session.view[qt] = 11;
+  }else
+  {
+
+  }
+
+
   console.log("Data of cart: " + request.session.view[request.query.id]);
-
-
+  console.log("Amount of Data in cart: " + request.session.view[qt]);
+  
 
   var result = {success: true};
   response.send(result);
