@@ -54,6 +54,6 @@ function checkIfLoggedIn(request, response) {
   }
   else{
     var result = {success:false, message:"Not logged in"};
-    res.send(result);
+    response.send(result);
   }
 }
