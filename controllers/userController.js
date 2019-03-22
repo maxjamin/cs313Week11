@@ -25,7 +25,8 @@ function getPerson(request, response) {
 		} else {
 			var person = result[0];
 			
-			request.locals.session.one = 1;
+			request.session = {};
+			request.session.user = 1;
 			console.log("Session " + request.session.one);
 
 			response.json(person);
