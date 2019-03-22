@@ -21,6 +21,7 @@ app.use(session({
 
 app.use(function (req, res, next) {
   if (!req.session.user) {
+    console.log("Create session user")
     req.session.user = {}
   }
   next()
