@@ -27,10 +27,10 @@ function getUser() {
 		$.get("/logInUser", {userName:username, password:password}, function(data) {
 			console.log("DATA RETURNED: " + JSON.stringify(data));
 			
-			/*document.getElementById("userLoginBar").innerHTML = data.username + " logged in";
+			document.getElementById("userLoginBar").innerHTML = data.username + " logged in";
 
 			//If user is their, log in and hide log in form
-			document.getElementById("loginForm").style.display = "none";
+			/*document.getElementById("loginForm").style.display = "none";
 			localStorage.setItem("userLogin", data.username);
 			localStorage.setItem("userEmail", data.email);*/
 
@@ -39,7 +39,10 @@ function getUser() {
 }
 
 function addToCart(result01, id){
-	$.get("/addToCart", function(data) {
+
+	console.log("add to cart " result01 + " " + id);
+
+	$.get("/addToCart", {result:result01, id:id} ,function(data) {
 		console.log("Data returned" + JSON.stringify(data));
 
 	})
