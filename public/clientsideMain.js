@@ -10,8 +10,8 @@ function checkIfLoggedInOnLoad() {
 	}*/
 
 	var one;
-	$.get("/checkIfLoggedIn", function() {
-			console.log("DATA RETURNED: " + JSON.stringify(data));
+	$.get("/checkIfLoggedIn", function(data) {
+			console.log("DATA RETURNED 02: " + JSON.stringify(data));
 			
 	});
 
