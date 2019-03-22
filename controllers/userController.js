@@ -3,11 +3,16 @@ const userModel = require("../models/userModel.js");
 const express = require('express')
 var session = require('express-session');
 var app = express()
+
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: true
 }))
+app.use(function (req, res, next) {
+  if (!req.session.user) {
+    req.session.user = {}
+  }
 
 function getPerson(request, response) {
 	// First get the person's id
