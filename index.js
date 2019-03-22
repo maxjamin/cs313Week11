@@ -29,7 +29,7 @@ express()
   .get('/logInUser', (req, res) => {
 
     userController.getPerson(req, res);
-    res.session.views["username"] = "Ben";
+    //res.session.views["username"] = "Ben";
 
   })
   .get('/getProducts', (req, res) => {
