@@ -73,7 +73,7 @@ function addObjectToCart(request, response) {
 
   request.session.view[request.query.id] = request.query.result01;
   //check to see if they need to add one, or add to the remaining qt
-  if(request.session.view[qt])
+  if(!request.session.view[qt])
   {
     request.session.view[qt] = 11;
   }else
