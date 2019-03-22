@@ -49,10 +49,11 @@ function checkIfLoggedIn(request, response) {
   var result = {success: true};
 
 
-  if(request.session) {
+  if(request.session.user) {
     console.log("Logged in");
   }
   else{
+    console.log("Not logged in");
     var result = {success:false, message:"Not logged in"};
     response.send(result);
   }
