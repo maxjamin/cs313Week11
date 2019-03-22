@@ -10,12 +10,6 @@ app.use(session({
   saveUninitialized: true
 }))
 
-app.use(function (req, res, next) {
-  if (!req.session.user) {
-    req.session.user = {}
-  }
-})
-
 function getPerson(request, response) {
 	// First get the person's id
 	var id = request.query.userName;
@@ -31,7 +25,11 @@ function getPerson(request, response) {
 			var person = result[0];
 			
 			//response.write(JSON.stringify(person));
-			request.session.user = "TEST01";
+			if(typeof request.session.user === 'undefined') {
+				request.session.user = 1;
+			}	
+
+
 			response.json(person);
 		}
 	});
