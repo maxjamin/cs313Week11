@@ -1,5 +1,7 @@
 const userModel = require("../models/userModel.js");
+cons index = require("../index.js");
 const express = require('express')
+
 
 function getPerson(request, response) {
 	// First get the person's id
@@ -16,7 +18,7 @@ function getPerson(request, response) {
 		} else {
 			var person = result[0];
 			
-			result.session.user = person.username;
+			response.session.user = person.username;
 			console.log("Session " + request.session.user);
 
 			response.json(person);
