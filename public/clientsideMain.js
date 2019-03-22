@@ -86,7 +86,7 @@ function loadProductTable(results) {
 
 function loadCartTable(results) {
 	console.log("Starting loadCartTable...");
-	console.log("session" + request.session.user);
+	console.log("session" + session.user);
 }
 
 
