@@ -20,7 +20,7 @@ function getPerson(request, response) {
 			
 
 			//request.session.user = person.username;
-			console.log("Session " + request.session.user);
+			//console.log("Session " + request.session.user);
 
 			response.json(person);
 		}

@@ -28,7 +28,7 @@ express()
   .get('/logInUser', (req, res) => {
 
     userController.getPerson(req, res);
-
+    
 
   })
   .get('/getProducts', (req, res) => {
