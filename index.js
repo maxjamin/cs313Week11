@@ -31,9 +31,9 @@ express()
     next()
   })
   .use(function (req, res, next) {
-    if (!req.session.view[req.id]) {
+    if (!req.session.view) {
       console.log("Create session user")
-      req.session.view[req.id] = {}
+      req.session.view = {}
     }
     next()
   })
