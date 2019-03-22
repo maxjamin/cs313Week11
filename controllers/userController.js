@@ -8,7 +8,6 @@ app.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: true,
-  user: ""
 }))
 
 function getPerson(request, response) {
@@ -16,6 +15,7 @@ function getPerson(request, response) {
 	var id = request.query.userName;
 	var pssword = request.query.password;
 	var answer = 68;
+	var sn;
 
 	userModel.getPersonFromDb(id, pssword, function(error, result) {
 		//callback function
@@ -25,10 +25,9 @@ function getPerson(request, response) {
 		} else {
 			var person = result[0];
 			
-			//response.write(JSON.stringify(person));
-			if(typeof request.session === 'undefined') {
-				request.session.user = 1;
-			}	
+			sn = request.session;
+			sn.username = request.username;
+
 			console.log("Session " + request.session);
 
 			response.json(person);
