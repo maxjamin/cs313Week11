@@ -70,6 +70,7 @@ function handleLogOut(request, response) {
 
     if(request.session.user)
     {
+      console.log("logging out..")
       request.session.destroy();
       result = {success: true};
     }
