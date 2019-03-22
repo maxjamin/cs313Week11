@@ -70,6 +70,7 @@ function addObjectToCart(request, response) {
 
 
   request.session.view[request.id] = request.result01;
+  console.log("Data of cart: " + request.session.view[request.id]);
 
 
 
