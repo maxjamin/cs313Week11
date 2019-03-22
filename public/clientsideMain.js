@@ -4,6 +4,7 @@ function checkIfLoggedInOnLoad() {
 			console.log("DATA RETURNED 02: " + JSON.stringify(data));
 			
 	});
+	console.log("DATA: " + data[0])
 
 	if(data) {
 		document.getElementById("userLoginBar").innerHTML = username + " logged in";
