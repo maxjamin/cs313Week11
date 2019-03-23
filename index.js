@@ -71,6 +71,7 @@ express()
 function getProductsFromCart(request, response) {
 
   var objectToCart = [];
+  var amountOfObjectToCart = [];
   var i;
 
   for(i=0;i<= 4;i++) {
@@ -79,12 +80,14 @@ function getProductsFromCart(request, response) {
     {
       console.log("Session var " + request.session.view[i] + " i: " + i )
       console.log("Amount Session var " + request.session.view[qt])
-      objectToCart[i][0]= request.session.view[i];
-      objectToCart[i][1]= request.session.view[qt];
+      objectToCart[i]= request.session.view[i];
+      amountOfObjectToCart[i]= request.session.view[qt];
     }
 
   }
-  response.send(objectToCart);
+  var response = {objectToCart, amountOfObjectToCart};
+
+  response.send(response);
 }
 
 function handleLogOut(request, response) {
