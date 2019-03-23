@@ -88,7 +88,29 @@ function loadCartTable(products, productsOnCart) {
 	console.log("Starting loadCartTable...");
 	if(products || productsOnCart) {
 		console.log("They exist");
-	}
+
+		var table = document.getElementById("cartTable");
+
+		for(var i=1; i<productsOnCart.length; i++) {
+
+			var product = [productTable.amountOfObjectToCart[i];
+			var prod = table.insertRow(i);
+
+			//Add items to the row.
+			for(var k=0; k<productsOnCart.length; k++) {
+				var one = prod.insertCell(k);
+				one.innerHTML = product[k];
+
+			}
+		}
+
+		var title = ["Name", "Description", "Image", "Amount", "Qt:"]; 
+		var row = table.insertRow(0);
+		for(var i=1; i<5; i++) {
+			var one = row.insertCell(i)
+			one.innerHTML = title[i];
+		}
+		}
 }
 
 
