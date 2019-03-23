@@ -86,7 +86,9 @@ function loadProductTable(results) {
 
 function loadCartTable(products, productsOnCart) {
 	console.log("Starting loadCartTable...");
-	//console.log("session" + session.user);
+	if(products || productsOnCart) {
+		console.log("They exist");
+	}
 }
 
 
@@ -112,6 +114,7 @@ function getProductsForCart() {
 	$.get("/getProductsFromCart", function(data) {
 		console.log("session cart var: ");
 		console.log(data);
+		productsOnCart = data;
 	})
 
 	loadCartTable(products, productsOnCart);
