@@ -135,6 +135,10 @@ function addObjectToCart(request, response) {
 
 function removeFromCart(request, response) {
   console.log("Remove from card: " +request);
+
+
+  var result = {success: true};
+  response.send(result);
 }
 
 function checkIfLoggedIn(request, response) {
