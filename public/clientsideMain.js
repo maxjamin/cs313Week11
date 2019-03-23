@@ -46,7 +46,7 @@ function addToCart(result01, id){
 }
 
 function removeFromCart(amount, id) {
-	console.log("remove from cart " + results);
+	console.log("remove from cart " + amount + " - " + id);
 
 	$.get("/removeFromCart", {id:id, amount:amount} ,function(data) {
 		console.log("Data returned" + JSON.stringify(data));
