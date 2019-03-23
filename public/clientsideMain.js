@@ -92,12 +92,12 @@ function loadCartTable(products, productsOnCart) {
 		$("#cartTable tr").remove();
 		var table = document.getElementById("cartTable");
 
-		for(var i=0; i<productsOnCart.amountOfObjectToCart.length; i++) {
+		for(var i=0; i<=productsOnCart.amountOfObjectToCart.length; i++) {
 
-			var product = [productsOnCart.objectToCart[i+1], 
-			productsOnCart.amountOfObjectToCart[i+1],
+			var product = [productsOnCart.objectToCart[i], 
+			productsOnCart.amountOfObjectToCart[i],
 			"<button onclick='removeFromCart()'>+</button>" ];
-			var prod = table.insertRow(i+1);
+			var prod = table.insertRow(i);
 
 			//Add items to the row.
 			for(var k=0; k<3; k++) {
