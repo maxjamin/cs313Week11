@@ -69,7 +69,7 @@ express()
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 function getProductsFromCart(request, response) {
-  console.log("Session var " + request.session.view[] )
+  //console.log("Session var " + request.session.view[] )
 }
 
 function handleLogOut(request, response) {
