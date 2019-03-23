@@ -101,7 +101,7 @@ function loadCartTable(products, productsOnCart) {
 			if(productsOnCart.amountOfObjectToCart[i]) {
 				var product = [productsOnCart.objectToCart[i], 
 				productsOnCart.amountOfObjectToCart[i],
-				"<button onclick='removeFromCart(\""+ productsOnCart.amountOfObjectToCart[i] +"\" , \""+productsOnCart.objectToCart[i]+"\")'>-</button>" ];
+				"<button onclick='removeFromCart(\""+ productsOnCart.amountOfObjectToCart[i] +"\" , \""+products[0].artwork_id+"\")'>-</button>" ];
 				var prod = table.insertRow(0);
 
 				//Add items to the row.
@@ -133,7 +133,7 @@ function getProducts() {
 }
 
 function getProductsForCart() {
-	
+
 	$.get("/getProducts", function(data) {
 
 		console.log("Back from sever Cart: ");
