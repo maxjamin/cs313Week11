@@ -94,16 +94,18 @@ function loadCartTable(products, productsOnCart) {
 
 		for(var i=1; i<productsOnCart.amountOfObjectToCart.length; i++) {
 
-			var product = [productsOnCart.objectToCart[i], 
-			productsOnCart.amountOfObjectToCart[i],
-			"<button onclick='removeFromCart()'>+</button>" ];
-			var prod = table.insertRow(i-1);
+			if(productsOnCart.objectToCart[i]) {
+				var product = [productsOnCart.objectToCart[i], 
+				productsOnCart.amountOfObjectToCart[i],
+				"<button onclick='removeFromCart()'>+</button>" ];
+				var prod = table.insertRow(i-1);
 
-			//Add items to the row.
-			for(var k=0; k<3; k++) {
-				var one = prod.insertCell(k);
-				one.innerHTML = product[k];
+				//Add items to the row.
+				for(var k=0; k<3; k++) {
+					var one = prod.insertCell(k);
+					one.innerHTML = product[k];
 
+				}
 			}
 		}
 
