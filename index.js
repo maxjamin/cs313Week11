@@ -140,7 +140,7 @@ function removeFromCart(request, response) {
     request.session.view[request.query.id] = null;
     request.session.view[qt] = null;
     var result = {success: true};
-  }
+  
   response.send(result);
 }
 
