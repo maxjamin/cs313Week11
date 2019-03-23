@@ -98,7 +98,7 @@ function loadCartTable(products, productsOnCart) {
 
 		for(var i=1; i<productsOnCart.amountOfObjectToCart.length; i++) {
 
-			if(productsOnCart.amountOfObjectToCart[i]) {
+			if(productsOnCart.amountOfObjectToCart[i] != null) {
 
 				var idForArtwork;
 				for(var j=0;j<products.length;j++)
