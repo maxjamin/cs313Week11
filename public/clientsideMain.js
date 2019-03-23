@@ -49,6 +49,14 @@ function addToCart(result01, id){
 	})
 }
 
+function removeFromCart(results) {
+	console.log("remove from cart " + results);
+
+	$.get("/removeFromCart", {result:result} ,function(data) {
+		console.log("Data returned" + JSON.stringify(data));
+
+	})
+}
 
 function loadProductTable(results) {
 	console.log("loadProductTable");
@@ -82,15 +90,6 @@ function loadProductTable(results) {
 	}
 
 
-}
-
-function removeFromCart(results) {
-	console.log("remove from cart " + results;
-
-	$.get("/removeFromCart", {result:result} ,function(data) {
-		console.log("Data returned" + JSON.stringify(data));
-
-	})
 }
 
 function loadCartTable(products, productsOnCart) {
