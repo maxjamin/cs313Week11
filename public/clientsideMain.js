@@ -89,13 +89,14 @@ function loadCartTable(products, productsOnCart) {
 	if(products || productsOnCart) {
 		console.log("They exist " + productsOnCart.amountOfObjectToCart.length);
 
-		$("#productTable tr").remove();
+		$("#cartTable tr").remove();
 		var table = document.getElementById("cartTable");
 
 		for(var i=0; i<productsOnCart.amountOfObjectToCart.length; i++) {
 
-			var product = [productsOnCart.amountOfObjectToCart[i],
-			productsOnCart.objectToCart[i], "<button onclick='removeFromCart()'>+</button>" ];
+			var product = [productsOnCart.objectToCart[i], 
+			productsOnCart.amountOfObjectToCart[i],
+			"<button onclick='removeFromCart()'>+</button>" ];
 			var prod = table.insertRow(i);
 
 			//Add items to the row.
