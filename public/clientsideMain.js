@@ -87,12 +87,12 @@ function loadProductTable(results) {
 function loadCartTable(products, productsOnCart) {
 	console.log("Starting loadCartTable...");
 	if(products || productsOnCart) {
-		console.log("They exist " + productsOnCart);
+		console.log("They exist " + productsOnCart.amountOfObjectToCart.length);
 
 		$("#productTable tr").remove();
 		var table = document.getElementById("cartTable");
 
-		for(var i=1; i<productsOnCart.amountOfObjectToCart.length; i++) {
+		for(var i=1; i<4; i++) {
 
 			var product = [productsOnCart.amountOfObjectToCart[i],
 			productsOnCart.objectToCart[i], "<button onclick='removeFromCart(\""+ name +"\", \""+id+"\")'>+</button>" ];
