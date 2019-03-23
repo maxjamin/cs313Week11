@@ -77,7 +77,7 @@ function getProductsFromCart(request, response) {
     var qt = i + "qt";
     if(request.session.view[i])
     {
-      console.log("Session var " + request.session.view[i] )
+      console.log("Session var " + request.session.view[i] + "i: " + i )
       console.log("Amount Session var " + request.session.view[qt])
     }
 
