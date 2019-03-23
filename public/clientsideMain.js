@@ -91,7 +91,7 @@ function loadProductTable(results) {
 function loadCartTable(products, productsOnCart) {
 	console.log("Starting loadCartTable...");
 	if(products || productsOnCart) {
-		console.log("They exist " + products);
+		console.log("They exist " + products[0].artwork_id);
 
 		$("#cartTable tr").remove();
 		var table = document.getElementById("cartTable");
