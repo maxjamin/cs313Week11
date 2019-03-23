@@ -45,7 +45,7 @@ function addToCart(result01, id){
 	})
 }
 
-function removeFromCart(id, results) {
+function removeFromCart(amount, id) {
 	console.log("remove from cart " + results);
 
 	$.get("/removeFromCart", {id:id, amount:amount} ,function(data) {
