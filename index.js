@@ -75,7 +75,7 @@ function handleLogOut(request, response) {
       request.session.destroy();
       result = {success: true};
     }
-    response.send(result);
+    response.json(result);
 }
 
 function addObjectToCart(request, response) {
