@@ -70,7 +70,7 @@ express()
 
 function getProductsFromCart(request, response) {
 
-  var objectToCart = [][];
+  var objectToCart = [];
   var i;
 
   for(i=0;i<= 4;i++) {
