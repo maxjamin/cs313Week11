@@ -53,6 +53,9 @@ express()
   .get('/addToCart', (req, res) => {
       addObjectToCart(req, res);
   })
+  .get('/removeFromCart', (req,res) => {
+      removeFromCart(req, res);
+  })
   .get('/getProducts', (req, res) => {
 
   	productController.getProducts(req, res);
@@ -128,6 +131,10 @@ function addObjectToCart(request, response) {
 
   var result = {success: true};
   response.send(result);
+}
+
+function removeFromCart(request, response) {
+  console.log("Remove from card: " +request);
 }
 
 function checkIfLoggedIn(request, response) {

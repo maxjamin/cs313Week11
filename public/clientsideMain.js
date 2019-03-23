@@ -84,6 +84,15 @@ function loadProductTable(results) {
 
 }
 
+function removeFromCart(results) {
+	console.log("remove from cart " + results;
+
+	$.get("/removeFromCart", {result:result} ,function(data) {
+		console.log("Data returned" + JSON.stringify(data));
+
+	})
+}
+
 function loadCartTable(products, productsOnCart) {
 	console.log("Starting loadCartTable...");
 	if(products || productsOnCart) {
@@ -97,7 +106,7 @@ function loadCartTable(products, productsOnCart) {
 			if(productsOnCart.amountOfObjectToCart[i]) {
 				var product = [productsOnCart.objectToCart[i], 
 				productsOnCart.amountOfObjectToCart[i],
-				"<button onclick='removeFromCart()'>+</button>" ];
+				"<button onclick='removeFromCart(\""+ productsOnCart.amountOfObjectToCart[i] +"\")'>+</button>" ];
 				var prod = table.insertRow(i-1);
 
 				//Add items to the row.
