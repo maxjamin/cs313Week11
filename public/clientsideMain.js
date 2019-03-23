@@ -106,7 +106,7 @@ function loadCartTable(products, productsOnCart) {
 				var product = [productsOnCart.objectToCart[i], 
 				productsOnCart.amountOfObjectToCart[i],
 				"<button onclick='removeFromCart(\""+ productsOnCart.amountOfObjectToCart[i] +"\")'>+</button>" ];
-				var prod = table.insertRow(i);
+				var prod = table.insertRow(0);
 
 				//Add items to the row.
 				for(var k=0; k<3; k++) {
