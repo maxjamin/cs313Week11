@@ -92,13 +92,13 @@ function loadCartTable(products, productsOnCart) {
 		$("#cartTable tr").remove();
 		var table = document.getElementById("cartTable");
 
-		for(var i=1; i<productsOnCart.amountOfObjectToCart.length; i++) {
+		for(var i=1; i<=productsOnCart.amountOfObjectToCart.length; i++) {
 
-			if(productsOnCart.objectToCart[i-1]) {
+			if(productsOnCart.objectToCart[i]) {
 				var product = [productsOnCart.objectToCart[i], 
 				productsOnCart.amountOfObjectToCart[i],
 				"<button onclick='removeFromCart()'>+</button>" ];
-				var prod = table.insertRow(i-1);
+				var prod = table.insertRow(i);
 
 				//Add items to the row.
 				for(var k=0; k<3; k++) {
@@ -106,7 +106,6 @@ function loadCartTable(products, productsOnCart) {
 					one.innerHTML = product[k];
 
 				}
-			}
 		}
 
 		var title = ["Name", "Qt:", "Remove"]; 
