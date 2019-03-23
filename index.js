@@ -144,7 +144,7 @@ function removeFromCart(request, response) {
   }
 
   var result = {success: true};
-  response.send(result);
+  response.render(result);
 }
 
 function checkIfLoggedIn(request, response) {
