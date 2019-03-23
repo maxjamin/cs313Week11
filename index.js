@@ -70,6 +70,12 @@ express()
 
 function getProductsFromCart(request, response) {
   console.log("Session var " + request.session.view[1] )
+
+  var objectToCart = [][2];
+  for(int i=0;i<4;i++) {
+    console.log("Session var " + request.session.view[i] )
+
+  }
 }
 
 function handleLogOut(request, response) {

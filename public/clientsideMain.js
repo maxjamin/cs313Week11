@@ -110,7 +110,7 @@ function getProductsForCart() {
 	})
 
 	$.get("/getProductsFromCart", function(data) {
-		console.log("session var: ");
+		console.log("session cart var: ");
 		console.log(data);
 	})
 
