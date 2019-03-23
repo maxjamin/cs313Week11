@@ -137,13 +137,10 @@ function removeFromCart(request, response) {
   console.log("Remove from card, id:" + request.query.id + " - " + request.query.amount);
   var qt = request.query.id + "qt";
 
-  if(request.query.id && request.query.amount)
-  {
     request.session.view[request.query.id] = null;
     request.session.view[qt] = null;
+    var result = {success: true};
   }
-
-  var result = {success: true};
   response.send(result);
 }
 
