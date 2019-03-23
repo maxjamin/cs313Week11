@@ -92,7 +92,7 @@ function loadCartTable(products, productsOnCart) {
 		$("#cartTable tr").remove();
 		var table = document.getElementById("cartTable");
 
-		for(var i=0; i<=productsOnCart.amountOfObjectToCart.length; i++) {
+		for(var i=1; i<productsOnCart.amountOfObjectToCart.length; i++) {
 
 			var product = [productsOnCart.objectToCart[i], 
 			productsOnCart.amountOfObjectToCart[i],
@@ -108,7 +108,7 @@ function loadCartTable(products, productsOnCart) {
 		}
 
 		var title = ["Name", "Qt:", "Remove"]; 
-		var row = table.insertRow(0);
+		var row = table.insertRow(1);
 		for(var i=0; i<3; i++) {
 			var one = row.insertCell(i)
 			one.innerHTML = title[i];
