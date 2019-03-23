@@ -85,9 +85,9 @@ function getProductsFromCart(request, response) {
     }
 
   }
-  var response = {objectToCart, amountOfObjectToCart};
+  var cart = {objectToCart, amountOfObjectToCart};
 
-  response.send(response);
+  response.send(cart);
 }
 
 function handleLogOut(request, response) {
