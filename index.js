@@ -134,7 +134,7 @@ function addObjectToCart(request, response) {
 }
 
 function removeFromCart(request, response) {
-  console.log("Remove from card, id:" + request.query.id + " - " request.query.amount);
+  console.log("Remove from card, id:" + request.query.id + " - " + request.query.amount);
 
 
   var result = {success: true};
