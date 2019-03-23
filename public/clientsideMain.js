@@ -115,9 +115,9 @@ function getProductsForCart() {
 		console.log("session cart var: ");
 		console.log(data);
 		productsOnCart = data;
+		loadCartTable(products, productsOnCart);
 	})
 
-	loadCartTable(products, productsOnCart);
 }
 
 function logOut() {
