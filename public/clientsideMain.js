@@ -106,7 +106,7 @@ function loadCartTable(products, productsOnCart) {
 
 		var title = ["Name", "Description", "Image", "Amount", "Qt:"]; 
 		var row = table.insertRow(0);
-		for(var i=1; i<5; i++) {
+		for(var i=0; i<5; i++) {
 			var one = row.insertCell(i)
 			one.innerHTML = title[i];
 		}
