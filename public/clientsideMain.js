@@ -30,10 +30,6 @@ function getUser() {
 
 			document.getElementById("userLoginBar").innerHTML = " logged in";
 			document.getElementById("loginForm").style.display = "none";
-			//If user is their, log in and hide log in form
-			/*document.getElementById("loginForm").style.display = "none";
-			localStorage.setItem("userLogin", data.username);
-			localStorage.setItem("userEmail", data.email);*/
 
 		})
 
@@ -49,10 +45,10 @@ function addToCart(result01, id){
 	})
 }
 
-function removeFromCart(amount, results) {
+function removeFromCart(id, results) {
 	console.log("remove from cart " + results);
 
-	$.get("/removeFromCart", {results:results, amount:amount} ,function(data) {
+	$.get("/removeFromCart", {id:id, amount:amount} ,function(data) {
 		console.log("Data returned" + JSON.stringify(data));
 
 	})
@@ -95,7 +91,7 @@ function loadProductTable(results) {
 function loadCartTable(products, productsOnCart) {
 	console.log("Starting loadCartTable...");
 	if(products || productsOnCart) {
-		console.log("They exist " + productsOnCart.amountOfObjectToCart.length);
+		console.log("They exist " + products);
 
 		$("#cartTable tr").remove();
 		var table = document.getElementById("cartTable");
