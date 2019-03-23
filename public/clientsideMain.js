@@ -99,6 +99,16 @@ function loadCartTable(products, productsOnCart) {
 		for(var i=1; i<productsOnCart.amountOfObjectToCart.length; i++) {
 
 			if(productsOnCart.amountOfObjectToCart[i]) {
+
+				int idForArtwork;
+				for(int j=0;j<products.length;j++)
+				{
+					if(productsOnCart.objectToCart[i] == products[j].name) {
+						idForArtwork = products[j].artwork_id;
+					}
+				}
+				console.log("ID is " + idForArtwork);
+
 				var product = [productsOnCart.objectToCart[i], 
 				productsOnCart.amountOfObjectToCart[i],
 				"<button onclick='removeFromCart(\""+ productsOnCart.amountOfObjectToCart[i] +"\" , \""+products[i].artwork_id+"\")'>-</button>" ];
