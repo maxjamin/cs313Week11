@@ -92,7 +92,7 @@ function loadCartTable(products, productsOnCart) {
 		$("#productTable tr").remove();
 		var table = document.getElementById("cartTable");
 
-		for(var i=1; i<productsOnCart.amountOfObjectToCart.length; i++) {
+		for(var i=0; i<productsOnCart.amountOfObjectToCart.length; i++) {
 
 			var product = [productsOnCart.amountOfObjectToCart[i],
 			productsOnCart.objectToCart[i], "<button onclick='removeFromCart()'>+</button>" ];
