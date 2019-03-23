@@ -63,7 +63,14 @@ express()
     checkIfLoggedIn(req, res)
     console.log("Test06")
   })
+ .get('/getProductsfromCart', (req, res) => {
+    getProductsFromCart(req,res)
+ })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+function getProductsFromCart(request, response) {
+  console.log("Session var " + request.session.view[] )
+}
 
 function handleLogOut(request, response) {
     var result = {success: false};

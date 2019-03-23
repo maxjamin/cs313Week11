@@ -84,7 +84,7 @@ function loadProductTable(results) {
 
 }
 
-function loadCartTable(allProducts, productsOnCart) {
+function loadCartTable(products, productsOnCart) {
 	console.log("Starting loadCartTable...");
 	//console.log("session" + session.user);
 }
@@ -92,25 +92,29 @@ function loadCartTable(allProducts, productsOnCart) {
 
 function getProducts() {
 
-	var products;
 	$.get("/getProducts", function(data) {
 
 		console.log("Back from sever: ");
 		console.log(data);
-		products = data;
+		loadProductTable(data);
 	})
-
-	//loadCartTable(products, productsOnCart);
 }
 
 function getProductsForCart() {
-
+	var products;
 	$.get("/getProducts", function(data) {
 
 		console.log("Back from sever Cart: ");
 		console.log(data);
-		loadCartTable(data);
+		products = data;
 	})
+
+	$.get("/getProductsFromCart", function(data) {
+		console.log("session var: ");
+		console.log(data);
+	})
+
+	loadCartTable(products, productsOnCart);
 }
 
 function logOut() {
