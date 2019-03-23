@@ -69,14 +69,19 @@ express()
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 function getProductsFromCart(request, response) {
-  console.log("Session var " + request.session.view[1] )
 
   var objectToCart = [][2];
-  /*var i;
-  for(i=0;i<4;i++) {
-    console.log("Session var " + request.session.view[i] )
+  var i;
 
-  }*/
+  for(i=0;i<4;i++) {
+    var qt = i + "qt";
+    if(request.session.view[i])
+    {
+      console.log("Session var " + request.session.view[i] )
+      console.log("Amount Session var " + request.session.view[qt])
+    }
+
+  }
 }
 
 function handleLogOut(request, response) {
