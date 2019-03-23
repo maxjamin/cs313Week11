@@ -133,18 +133,17 @@ function getProducts() {
 }
 
 function getProductsForCart() {
-	var products, productsOnCart;
+	
 	$.get("/getProducts", function(data) {
 
 		console.log("Back from sever Cart: ");
 		console.log(data);
-		products = data;
-	})
 
-	$.get("/getProductsFromCart", function(data) {
-		console.log("session cart var: ");
-		console.log(data);
-		loadCartTable(products, data);
+		$.get("/getProductsFromCart", function(data01) {
+			console.log("session cart var: ");
+			console.log(data01);
+			loadCartTable(data, data01);
+		})
 	})
 
 }
