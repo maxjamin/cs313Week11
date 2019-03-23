@@ -94,7 +94,8 @@ function loadCartTable(products, productsOnCart) {
 
 		for(var i=1; i<productsOnCart.length; i++) {
 
-			var product = productTable.amountOfObjectToCart[i];
+			var product = [productTable.amountOfObjectToCart[i],
+			productTable.objectToCart[i], "<button onclick='removeFromCart(\""+ name +"\", \""+id+"\")'>+</button>" ];
 			var prod = table.insertRow(i);
 
 			//Add items to the row.
@@ -105,9 +106,9 @@ function loadCartTable(products, productsOnCart) {
 			}
 		}
 
-		var title = ["Name", "Description", "Image", "Amount", "Qt:"]; 
+		var title = ["Name", "Qt:", "Remove"]; 
 		var row = table.insertRow(0);
-		for(var i=0; i<5; i++) {
+		for(var i=0; i<3; i++) {
 			var one = row.insertCell(i)
 			one.innerHTML = title[i];
 		}
