@@ -101,7 +101,7 @@ function getProducts() {
 }
 
 function getProductsForCart() {
-	var products;
+	var products, productsOnCart;
 	$.get("/getProducts", function(data) {
 
 		console.log("Back from sever Cart: ");
