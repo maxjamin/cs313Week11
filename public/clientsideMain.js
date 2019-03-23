@@ -89,6 +89,7 @@ function loadCartTable(products, productsOnCart) {
 	if(products || productsOnCart) {
 		console.log("They exist");
 
+		$("#productTable tr").remove();
 		var table = document.getElementById("cartTable");
 
 		for(var i=1; i<productsOnCart.length; i++) {
