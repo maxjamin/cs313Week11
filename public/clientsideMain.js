@@ -99,7 +99,7 @@ function loadCartTable(products, productsOnCart) {
 			var prod = table.insertRow(i);
 
 			//Add items to the row.
-			for(var k=0; k<productsOnCart.length; k++) {
+			for(var k=0; k<3; k++) {
 				var one = prod.insertCell(k);
 				one.innerHTML = product[k];
 
