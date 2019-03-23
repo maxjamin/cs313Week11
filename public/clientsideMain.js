@@ -107,7 +107,6 @@ function loadCartTable(products, productsOnCart) {
 
 				}
 		}
-
 		var title = ["Name", "Qt:", "Remove"]; 
 		var row = table.insertRow(0);
 		for(var i=0; i<3; i++) {
