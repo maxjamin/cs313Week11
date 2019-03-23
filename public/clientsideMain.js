@@ -115,7 +115,6 @@ function loadCartTable(products, productsOnCart) {
 		}
 }
 
-
 function getProducts() {
 
 	$.get("/getProducts", function(data) {
