@@ -116,7 +116,7 @@ function addObjectToCart(request, response) {
   //check to see if they need to add one, or add to the remaining qt
   if(!request.session.view[qt])
   {
-    request.session.view[qt] = 01;
+    request.session.view[qt] = 1;
   }else
   {
     var quant = request.session.view[qt];
@@ -137,9 +137,9 @@ function removeFromCart(request, response) {
   console.log("Remove from card, id:" + request.query.id + " - " + request.query.amount);
   var qt = request.query.id + "qt";
 
-    request.session.view[request.query.id] = null;
-    request.session.view[qt] = null;
-    var result = {success: true};
+  request.session.view[request.query.id] = null;
+  request.session.view[qt] = null;
+  var result = {success: true};
   
   response.send(result);
 }

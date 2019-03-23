@@ -103,7 +103,8 @@ function loadCartTable(products, productsOnCart) {
 				var idForArtwork;
 				for(var j=0;j<products.length;j++)
 				{
-					if(productsOnCart.objectToCart[i] == products[j].name) {
+					if(productsOnCart.objectToCart[i] == products[j].name &&
+						products[j].artwork_id == i) {
 						idForArtwork = products[j].artwork_id;
 					}
 				}
