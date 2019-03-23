@@ -100,7 +100,7 @@ function loadCartTable(products, productsOnCart) {
 
 			if(productsOnCart.amountOfObjectToCart[i]) {
 
-				int idForArtwork;
+				var idForArtwork;
 				for(int j=0;j<products.length;j++)
 				{
 					if(productsOnCart.objectToCart[i] == products[j].name) {
